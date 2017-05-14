@@ -6,7 +6,7 @@ struct WindowsPort windows[MAX_WINDOWS] = { 0 };
 int MaxCustSingleLine, MaxLines, MaxSeqLen, MinTimeLen, MaxTimeLen, MinRestSec, MaxRestSec;
 
 void init();
-void input(int, int*, string &, int*);
+void input(int, int *, string &, int *);
 void output(int, int, int);
 void check_quit(int *);
 
