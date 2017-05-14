@@ -20,7 +20,7 @@ void state_trans(string CurTimeRequestOfWindows) {
 	int i;
 	for (i = 1; i <= MAX_WINDOWS; i++) {
 		switch (windows[i].State) {
-		case 1://空闲状态
+		case AVAILABLE_PORT://空闲状态
 			if (windows[i].CurNum > 0) {
 				windows[i].CurStateTime = 1;
 				windows[i].CurNum--;
@@ -30,14 +30,14 @@ void state_trans(string CurTimeRequestOfWindows) {
 				windows[i].State = 2;
 			}
 			windows[i].TotOnTime++;
-			break;
-		case 2://正在安检
+                break;
+		case CHECKING_PORT://正在安检
 			windows[i].CurStateTime++;
 			if (windows[i].CurStateTime == windows[i].CurCustTime - 1)
 				windows[i].State = 3;
 			windows[i].TotOnTime++;
 			break;
-		case 3://此人安检结束，下一个人开始安检
+		case SWITCHING_PORT://此人安检结束，下一个人开始安检
 			windows[i].CurStateTime = 1;
 			windows[i].TotServeTime += windows[i].CurCustTime;
 			if (windows[i].CurNum > 0) {//若还有人在排队，则安排下一个人安检
@@ -58,7 +58,7 @@ void state_trans(string CurTimeRequestOfWindows) {
 				}
 			}
 			break;
-		case 4://休息
+		case RESTTING_PORT://休息
 			if (CurTimeRequestOfWindows[i] == 0) {
 				windows[i].CurStateTime++;
 				if (windows[i].CurStateTime == windows[i].ScheRestTime) {
@@ -74,7 +74,7 @@ void state_trans(string CurTimeRequestOfWindows) {
 			}
 			windows[i].RestSignal = 0;
 			break;
-		case 5://关闭
+		case CLOSE_PORT://关闭
 			break;
 		}
 	}
