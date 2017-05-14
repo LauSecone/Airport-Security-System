@@ -18,7 +18,7 @@ using namespace std;
 
 void state_trans(string CurTimeRequestOfWindows) {
 	int i;
-	for (i = 1; i <= MAXWINDOWS; i++) {
+	for (i = 1; i <= MAX_WINDOWS; i++) {
 		switch (windows[i].State) {
 		case 1://空闲状态
 			if (windows[i].CurNum > 0) {

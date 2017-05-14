@@ -5,7 +5,10 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#define MAXWINDOWS 10
+#define MAX_WINDOWS 10
+#define OFF_DUTY 0
+#define ON_DUTY 1
+#define WAIT_FOR_QUIT 2
 
 struct WindowsPort {
 	int State;
@@ -16,6 +19,6 @@ struct WindowsPort {
 };
 
 extern int MaxCustSingleLine, MaxLines, MaxSeqLen, MinTimeLen, MaxTimeLen, MinRestSec, MaxRestSec;
-extern struct WindowsPort windows[MAXWINDOWS];
+extern struct WindowsPort windows[MAX_WINDOWS];
 
 #endif

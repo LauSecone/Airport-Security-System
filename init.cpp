@@ -7,8 +7,8 @@ void init() {
 		windows[i].State = 1;
 	}
 	string s;
-	ifstream fin("ConfigFile.cfg");
-	if (fin.is_open()) {
+	ifstream fin("ConfigFile.cfg", ifstream::in);
+	if (fin) {
 		fin >> s >> MaxCustSingleLine >> s >> MaxLines >> s >> MaxSeqLen >> s >> MinTimeLen
 			>> s >> MaxTimeLen >> s >> MinRestSec >> s >> MaxRestSec;
 		cout << "The Config File has been readed." << endl;
