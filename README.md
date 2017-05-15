@@ -1,6 +1,7 @@
 # Airport-Security-System
 
 This is a term project in order to simulate airprot security system.
+
 The members of this team are: Liu Secone, Wen He, Yang Yilin.
 
 Several great ideas have striken us.
