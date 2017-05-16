@@ -1,15 +1,11 @@
 /*
-	struct WindowsPort {
-	int State;	//the state of windows
-	int CurNum; //current guest number of windows
+ struct WindowsPort {
+	int State;
+	int CurNum, CurCustTime;
 	int CurStateTime;
-	int CurGuestTime;
-	int TotOffTime, TotOnTime, TotServeTime, TotNum, ScheRestTime;
-	int RestSignal;
-}
-
-MaxCustSingleLine（单队列最大等待乘客数），MaxLines（蛇形缓冲区最多由MaxLines个直队组成）、MaxSeqLen（最大允许等待长度）、MinTimeLen（一次安检最短时长，单位为分钟），MaxTimeLen（一次安检最长时长，单位为分钟）
-}
+	int TotOffTime, TotOnTime;
+	int TotServeTime, TotNum, ScheRestTime, RestSignal, TotRestTime;
+ };
 */
 
 #include <ctime>
@@ -24,8 +20,6 @@ void state_trans(string CurTimeRequestOfWindows) {
                 windows[i].CurStateTime = 0;
                 if (windows[i].CurNum > 0) {
                     windows[i].CurStateTime = 1;
-                    windows[i].CurNum--;
-                    windows[i].TotNum++;
                     srand((unsigned)time(0));
                     srand(rand());
                     windows[i].CurCustTime = rand() % (MaxTimeLen - MinTimeLen) + MinTimeLen;
@@ -37,6 +31,8 @@ void state_trans(string CurTimeRequestOfWindows) {
                 windows[i].CurStateTime++;
                 if (windows[i].CurStateTime == windows[i].CurCustTime){
                     windows[i].State = 3;
+                    windows[i].CurNum--;
+                    windows[i].TotNum++;
                     windows[i].TotServeTime += windows[i].CurCustTime;
                 }
                 windows[i].TotOnTime++;
@@ -44,8 +40,6 @@ void state_trans(string CurTimeRequestOfWindows) {
             case SWITCHING_PORT://此人安检结束，或休息刚结束。状态转换
                 windows[i].CurStateTime = 1;
                 if (windows[i].CurNum > 0) {//若还有人在排队，则安排下一个人安检
-                    windows[i].CurNum--;
-                    windows[i].TotNum++;
                     srand(rand());
                     windows[i].CurCustTime = rand() % (MaxTimeLen - MinTimeLen + 1) + MinTimeLen;
                     windows[i].State = 2;
