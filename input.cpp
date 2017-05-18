@@ -6,10 +6,10 @@ void input(int Time, int* CurTimeNumOfCustCome, string &CurTimeRequestOfWindows,
 	if (*state == WAIT_FOR_QUIT) return;
 	static string RequestOfWindows(MAX_WINDOWS, '0');
 	static int NumOfCustCome = 0, ProcessTime = 0;
-	if (ProcessTime < Time) {
+	CurTimeRequestOfWindows = (MAX_WINDOWS, '0');
+	*CurTimeNumOfCustCome = 0;
+	if ((ProcessTime < Time) && (NumOfCustCome == 0)) {
 		char ch;
-		NumOfCustCome = 0;
-		RequestOfWindows = (MAX_WINDOWS, '0');
 		cin >> ch >> ch >> ProcessTime;
 		string str;
 		cin >> str;
@@ -30,6 +30,8 @@ void input(int Time, int* CurTimeNumOfCustCome, string &CurTimeRequestOfWindows,
 	if (ProcessTime == Time) {
 		CurTimeRequestOfWindows = RequestOfWindows;
 		*CurTimeNumOfCustCome = NumOfCustCome;
+		NumOfCustCome = 0;
+		RequestOfWindows = (MAX_WINDOWS, '0');
 	}
 	return;
 }

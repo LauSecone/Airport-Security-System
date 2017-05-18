@@ -5,7 +5,7 @@ using namespace std;
 
 void allocust(int*quenum) {
 	int i, custtotal = 0, custneed = 0;
-	bool winstate[10] = {0};
+	bool winstate[10] = { 0 };
 	for (i = 1; i <= MAX_WINDOWS; i++)
 		if (windows[i].State != 4 && windows[i].State != 5)
 		{
@@ -28,9 +28,9 @@ void allocust(int*quenum) {
 					maxeffi = efficiency;
 					dest = i;
 				}
-				windows[dest].CurNum++;
-				custtotal++;
-				(*quenum)--;
 			}
+		++windows[dest].CurNum;
+		++custtotal;
+		--(*quenum);
 	}
 }
