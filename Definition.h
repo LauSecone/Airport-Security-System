@@ -22,7 +22,7 @@ struct WindowsPort {
 	int CurNum, CurCustTime;
 	int CurStateTime;
 	int TotOffTime, TotOnTime;
-	int TotServeTime, TotNum, ScheRestTime, RestSignal, TotRestTime;
+	int TotServeTime, TotNum, ScheRestTime, RestSignal;
 };
 
 extern int MaxCustSingleLine, MaxLines, MaxSeqLen, MinTimeLen, MaxTimeLen, MinRestSec, MaxRestSec;
