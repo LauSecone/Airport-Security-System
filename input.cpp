@@ -6,7 +6,7 @@ void input(int Time, int* CurTimeNumOfCustCome, string &CurTimeRequestOfWindows,
 	if (*state == WAIT_FOR_QUIT) return;
 	static string RequestOfWindows(MAX_WINDOWS, '0');
 	static int NumOfCustCome = 0, ProcessTime = 0;
-	CurTimeRequestOfWindows = (MAX_WINDOWS, '0');
+	CurTimeRequestOfWindows.assign(MAX_WINDOWS, '0');
 	*CurTimeNumOfCustCome = 0;
 	if ((ProcessTime < Time) && (NumOfCustCome == 0)) {
 		char ch;
@@ -19,19 +19,18 @@ void input(int Time, int* CurTimeNumOfCustCome, string &CurTimeRequestOfWindows,
 			case 'G': ++NumOfCustCome; break;
 			case 'C': sta = 'C'; break;
 			case 'R': sta = 'R'; break;
-			case 'Q': *state = WAIT_FOR_QUIT;
+			case 'Q': *state = WAIT_FOR_QUIT; break;
 			}
 			if (isdigit(iter)) {
 				RequestOfWindows[iter - '0'] = sta;
 			}
 		}
-
 	}
 	if (ProcessTime == Time) {
 		CurTimeRequestOfWindows = RequestOfWindows;
 		*CurTimeNumOfCustCome = NumOfCustCome;
 		NumOfCustCome = 0;
-		RequestOfWindows = (MAX_WINDOWS, '0');
+		RequestOfWindows.assign(MAX_WINDOWS, '0');
 	}
 	return;
 }

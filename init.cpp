@@ -1,3 +1,4 @@
+#include<fstream>
 #include "Definition.h"
 
 using namespace std;
