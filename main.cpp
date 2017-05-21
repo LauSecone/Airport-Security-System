@@ -13,6 +13,7 @@ void state_trans(string);
 void restornot(int *, string);
 void allocust(int *);
 void comeincust(int *, int);
+
 int main() {
 	int Time = 0;
 	init();
