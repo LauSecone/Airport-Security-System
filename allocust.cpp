@@ -7,7 +7,7 @@ void allocust(int*quenum) {
 	int i, custtotal = 0, custneed = 0;
 	bool winstate[MAX_WINDOWS] = { 0 };
 	for (i = 1; i <= REAL_WINDOWS; i++) {
-		if (windows[i].State != 4 && windows[i].State != 5)
+		if (windows[i].State != 4 && windows[i].State != 5 && windows[i].RestSignal == 0)
 		{
 			winstate[i] = 1;
 			custtotal += windows[i].CurNum;//统计安检口乘客总数 

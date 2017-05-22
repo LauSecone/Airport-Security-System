@@ -1,6 +1,5 @@
 #include <cmath>
 #include <fstream>
-#include "memcmp.cpp"
 #include "Definition.h"
 
 using namespace std;
@@ -17,15 +16,17 @@ void output(int Time, int QueueNum, int State) {
 	else {
 		cout << "N" << endl;
 	}
-	cout << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot" << endl;
+	cout << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime" << endl;
 	for (int i = 1; i <= REAL_WINDOWS; ++i) {
 		cout << i << "	" << windows[i].State;
 		cout << "	" << windows[i].CurNum
 			<< "		" << windows[i].CurCustTime
 			<< "		" << windows[i].CurNum
-			<< "		" << windows[i].TotNum;
+			<< "		" << windows[i].TotNum
+			<< "	" << windows[i].ScheRestTime
+			<< "	" << windows[i].TotOffTime;
 		cout << endl;
 	}
-	cout << "ListLines = " << ceil(QueueNum / MaxCustSingleLine) << endl;
+	cout << "ListLines = " << (ceil(QueueNum / MaxCustSingleLine) != 0 ? ceil(QueueNum / MaxCustSingleLine) : 1) << endl;
 	cout << "ListCustCount = " << QueueNum << endl << endl;
 }
