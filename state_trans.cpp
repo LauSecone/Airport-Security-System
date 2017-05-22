@@ -17,7 +17,11 @@ void state_trans(string CurTimeRequestOfWindows) {
 	srand((unsigned)time(0));
 	srand(rand());
 	for (i = 1; i <= MAX_WINDOWS; i++) {
-		switch (windows[i].State) {
+        if (windows[i].RestSignal == 1 && windows[i].State == 1){
+            windows[i].RestSignal = 0;
+            windows[i].State = 4;
+        }
+        switch (windows[i].State) {
 		case AVAILABLE_PORT://空闲状态
 			windows[i].CurStateTime = 0;
 			if (windows[i].CurNum > 0) {
@@ -48,18 +52,8 @@ void state_trans(string CurTimeRequestOfWindows) {
 				windows[i].TotOnTime++;
 			}
 			else if (windows[i].CurNum == 0) {//若没有人排队
-				if (windows[i].RestSignal == 0) {//若无休息许可，进入空闲状态（1）
-					windows[i].State = 1;
-					windows[i].TotOnTime++;
-				}
-				else {//若有休息许可，进入休息状态（4）
-					windows[i].State = 4;
-					//srand((unsigned)time(0));
-					srand(rand());
-					windows[i].ScheRestTime = rand() % (MaxRestSec - MinRestSec + 1) + MinRestSec;
-					windows[i].CurCustTime = 0;
-					//                        windows[i].TotRestTime = 1;
-				}
+                windows[i].State = 1;
+                windows[i].TotOnTime++;
 			}
 			break;
 		case RESTTING_PORT://休息
@@ -77,7 +71,6 @@ void state_trans(string CurTimeRequestOfWindows) {
 				windows[i].TotOnTime++;
 			}
 			//                windows[i].TotRestTime ++;
-			windows[i].RestSignal = 0;
 			break;
 		case CLOSE_PORT://关闭
 			break;
