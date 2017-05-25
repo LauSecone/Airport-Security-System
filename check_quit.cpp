@@ -12,7 +12,7 @@ void check_quit(int *State) {
 			flag = 0;
 		}
 	}
-	if (!flag) {
+	if (flag) {
 		*State = OFF_DUTY;
 	}
 	return;
