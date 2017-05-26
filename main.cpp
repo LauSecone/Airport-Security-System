@@ -1,5 +1,5 @@
 #include "Definition.h"
-
+#include <ctime>
 using namespace std;
 
 struct WindowsPort windows[MAX_WINDOWS] = { 0 };
@@ -20,6 +20,7 @@ int main() {
 	int State = ON_DUTY, QueueNum = 0;
 	string CurTimeRequestOfWindows(MAX_WINDOWS, '0');
 	int CurTimeNumOfCustCome = 0;
+//    srand((unsigned)time(0));
 	while (State) {
 		++Time;
 		//init();

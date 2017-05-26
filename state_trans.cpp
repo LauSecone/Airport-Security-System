@@ -14,15 +14,15 @@ using namespace std;
 
 void state_trans(string CurTimeRequestOfWindows) {
 	int i;
-	srand((unsigned)time(0));
+//	srand((unsigned)time(0));
 	srand(rand());
 	for (i = 1; i <= MAX_WINDOWS; i++) {
-		if (windows[i].RestSignal == 1 && windows[i].State == 1) {
-			windows[i].RestSignal = 0;
-			windows[i].State = 4;
-			windows[i].ScheRestTime = rand() % (MaxRestSec - MinTimeLen + 1) + MinRestSec;
-		}
-		switch (windows[i].State) {
+        if (windows[i].RestSignal == 1 && windows[i].State == 1){
+            windows[i].RestSignal = 0;
+            windows[i].State = 4;
+            windows[i].ScheRestTime = rand()%( MaxRestSec - MinRestSec + 1) + MinRestSec;
+        }
+        switch (windows[i].State) {
 		case AVAILABLE_PORT://空闲状态
 			windows[i].CurStateTime = 0;
 			if (windows[i].CurNum > 0) {
@@ -53,12 +53,12 @@ void state_trans(string CurTimeRequestOfWindows) {
 				windows[i].TotOnTime++;
 			}
 			else if (windows[i].CurNum == 0) {//若没有人排队
-				windows[i].State = 1;
-				windows[i].TotOnTime++;
+                windows[i].State = 1;
+                windows[i].TotOnTime++;
 			}
 			break;
 		case RESTTING_PORT://休息
-			if (CurTimeRequestOfWindows[i] != 'C') {
+			if (CurTimeRequestOfWindows[i] == '0') {
 				windows[i].CurStateTime++;
 				if (windows[i].CurStateTime == windows[i].ScheRestTime) {
 					windows[i].TotOffTime += windows[i].ScheRestTime;
@@ -66,9 +66,8 @@ void state_trans(string CurTimeRequestOfWindows) {
 					windows[i].TotOnTime++;
 				}
 			}
-			else if (CurTimeRequestOfWindows[i] == 'C') {
+			else if (CurTimeRequestOfWindows[i] == '1') {
 				windows[i].TotOffTime += windows[i].ScheRestTime;
-				windows[i].ScheRestTime = 0;
 				windows[i].State = 1;
 				windows[i].TotOnTime++;
 			}
