@@ -20,6 +20,11 @@
 #define RESTTING_PORT 4
 #define CLOSE_PORT 5
 
+#define READ_VIA_FILE 0
+#define READ_VIA_KEYBOARD 1
+#define WRITE_VIA_FILE 0
+#define WRITE_VIA_KEYBOARD 1
+
 struct WindowsPort {
 	int State;
 	int CurNum, CurCustTime;

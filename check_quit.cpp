@@ -2,8 +2,8 @@
 
 using namespace std;
 
-void check_quit(int *State) {
-	if (*State != WAIT_FOR_QUIT) {
+void check_quit(int &State) {
+	if (State != WAIT_FOR_QUIT) {
 		return;
 	}
 	int flag = 1;
@@ -13,7 +13,7 @@ void check_quit(int *State) {
 		}
 	}
 	if (flag) {
-		*State = OFF_DUTY;
+		State = OFF_DUTY;
 	}
 	return;
 }

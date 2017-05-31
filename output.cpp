@@ -4,13 +4,13 @@
 
 using namespace std;
 
-template <class TYPE>
-int isequal(const TYPE &, const TYPE &);
+static struct WindowsPort windowsBU[MAX_WINDOWS] = { 0 };
 
-void output(const int Time, const int QueueNum, const int State) {
+int isequal(const int &);
+
+void output_via_file(const int Time, const int QueueNum, const int State) {
 	static ofstream fout("output.log", ofstream::out);
 	static ofstream foutD("outputDetail.log", ofstream::out);
-	static struct WindowsPort windowsBU[MAX_WINDOWS] = { 0 };
 	if (fout) {
 		fout << "Time is " << Time << endl;
 		fout << "OFFDUTY=";
@@ -38,7 +38,7 @@ void output(const int Time, const int QueueNum, const int State) {
 		cout << "Can't record the Output Log." << endl;
 	}
 	if (foutD) {
-		if (!isequal(windowsBU, windows)) {
+		if (!isequal(Time)) {
 			for (int i = 0; i < MAX_WINDOWS; ++i) {
 				windowsBU[i] = windows[i];
 			}
@@ -70,19 +70,41 @@ void output(const int Time, const int QueueNum, const int State) {
 	}
 }
 
-template <class TYPE>
-int isequal(const TYPE &x, const TYPE &y) {
+void output_via_keyboard(const int Time, const int QueueNum, const int State) {
+	if (!isequal(Time)) {
+		for (int i = 0; i < MAX_WINDOWS; ++i) {
+			windowsBU[i] = windows[i];
+		}
+		cout << "Time is " << Time << endl;
+		cout << "OFFDUTY=";
+		if (State == 0) {
+			cout << "Y" << endl;
+		}
+		else {
+			cout << "N" << endl;
+		}
+		cout << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime" << endl;
+		for (int i = 1; i <= REAL_WINDOWS; ++i) {
+			cout << i << "	" << windows[i].State;
+			cout << "	" << windows[i].CurNum
+				<< "		" << windows[i].CurCustTime
+				<< "		" << windows[i].CurNum
+				<< "		" << windows[i].TotNum
+				<< "	" << windows[i].ScheRestTime
+				<< "		" << windows[i].TotOffTime;
+			cout << endl;
+		}
+		cout << "ListLines = " << (ceil(QueueNum / MaxCustSingleLine) != 0 ? ceil(QueueNum / MaxCustSingleLine) : 1) << endl;
+		cout << "ListCustCount = " << QueueNum << endl << endl;
+	}
+}
+
+int isequal(const int &Time) {
+	if (Time == 1) return 0;
 	for (int i = 0; i < MAX_WINDOWS; ++i) {
-		if ((x[i].CurNum != y[i].CurNum) || (x[i].State != y[i].State)) {
+		if (windowsBU[i].CurNum != windows[i].CurNum) {
 			return 0;
 		}
 	}
 	return 1;
 }
-
-/*
-template <class TYPE>
-int isequal(const TYPE &data1, const TYPE &data2) {
-	return (memcmp(reinterpret_cast<const void *>(&data1), reinterpret_cast<const void *>(&data2), sizeof(TYPE)) == 0);
-}
-*/

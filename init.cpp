@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void init() {
+void init(int &in, int &out) {
 	for (int i = 1; i <= INIT_OPEN_WINDOWS; ++i) {
 		windows[i].State = AVAILABLE_PORT;
 	}
@@ -20,5 +20,11 @@ void init() {
 	else {
 		cout << "Can't open the Config File." << endl;
 	}
+	cout << "Please choose read method:(default is keyboard)" << endl << "1. Read via keyboard 2. Read via file" << endl << "Please write the number 1 or 2" << endl;
+	cin >> in;
+	--in;
+	cout << "Please choose write method:(default is keyboard)" << endl << "1. Write via keyboard 2. Write via file" << endl << "Please write the number 1 or 2" << endl;
+	cin >> out;
+	--out;
 	return;
 }
