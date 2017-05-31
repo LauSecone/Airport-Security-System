@@ -18,7 +18,15 @@ void init(int &in, int &out) {
 		fin.close();
 	}
 	else {
-		cout << "Can't open the Config File." << endl;
+		cout << "Can't open the Config File. But we set the default data." << endl;
+		MaxCustSingleLine = 30;
+		MaxLines = 8;
+		MaxSeqLen = 10;
+		MinTimeLen = 2;
+		MaxTimeLen = 5;
+		MinRestSec = 2;
+		MaxRestSec = 5;
+
 	}
 	cout << "Please choose read method:(default is keyboard)" << endl << "1. Read via keyboard 2. Read via file" << endl << "Please write the number 1 or 2" << endl;
 	cin >> in;
