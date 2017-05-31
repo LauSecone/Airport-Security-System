@@ -1,0 +1,2100 @@
+Time is 1
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		0	0		0
+2	1	0		0		0		0	0		0
+3	1	0		0		0		0	0		0
+4	1	0		0		0		0	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 2
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		0	0		0
+2	1	0		0		0		0	0		0
+3	1	0		0		0		0	0		0
+4	1	0		0		0		0	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 3
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		0	0		0
+2	1	0		0		0		0	0		0
+3	1	0		0		0		0	0		0
+4	1	0		0		0		0	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 4
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		0	0		0
+2	1	0		0		0		0	0		0
+3	1	0		0		0		0	0		0
+4	1	0		0		0		0	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 5
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		0	0		0
+2	1	0		0		0		0	0		0
+3	1	0		0		0		0	0		0
+4	1	0		0		0		0	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 6
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		0	0		0
+2	1	0		0		0		0	0		0
+3	1	0		0		0		0	0		0
+4	1	0		0		0		0	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 7
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		0	0		0
+2	1	0		0		0		0	0		0
+3	1	0		0		0		0	0		0
+4	1	0		0		0		0	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 8
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		0	0		0
+2	1	0		0		0		0	0		0
+3	1	0		0		0		0	0		0
+4	1	0		0		0		0	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 3
+
+Time is 9
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	2	1		2		1		0	0		0
+2	2	1		4		1		0	0		0
+3	2	1		4		1		0	0		0
+4	1	0		0		0		0	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 10
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	3	0		0		0		1	0		0
+2	2	1		4		1		0	0		0
+3	2	1		4		1		0	0		0
+4	1	0		0		0		0	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 2
+
+Time is 11
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	2	1		2		1		1	0		0
+2	2	1		4		1		0	0		0
+3	2	1		4		1		0	0		0
+4	2	1		3		1		0	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 12
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	3	0		0		0		2	0		0
+2	3	0		0		0		1	0		0
+3	3	0		0		0		1	0		0
+4	2	1		3		1		0	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 13
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	0		0
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	3	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 14
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	0		0
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 15
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	4	0		0		0		2	2		0
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 16
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	4	0		0		0		2	2		0
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 17
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	3	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 18
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 19
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 20
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 21
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 22
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 23
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 24
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 25
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 26
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 27
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 28
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 29
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 30
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 31
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 32
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 33
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 34
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 35
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 36
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 37
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 38
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 39
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 40
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 41
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 42
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 43
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 44
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 45
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 46
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 47
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 48
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 49
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	1	0		0		0		1	0		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 50
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		2	2		2
+2	1	0		0		0		1	0		0
+3	4	0		0		0		1	4		0
+4	1	0		0		0		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 5
+
+Time is 51
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	2	2		2		2		2	2		2
+2	2	1		5		1		1	0		0
+3	4	0		0		0		1	4		0
+4	2	2		3		2		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 52
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	3	1		0		1		3	2		2
+2	2	1		5		1		1	0		0
+3	4	0		0		0		1	4		0
+4	2	2		3		2		1	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 53
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	2	1		4		1		3	2		2
+2	2	1		5		1		1	0		0
+3	4	0		0		0		1	4		0
+4	3	1		0		1		2	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 54
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	2	1		4		1		3	2		2
+2	2	1		5		1		1	0		0
+3	3	0		0		0		1	4		4
+4	2	1		4		1		2	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 55
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	2	1		4		1		3	2		2
+2	3	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	2	1		4		1		2	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 56
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	3	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	2	1		4		1		2	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 57
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	3	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 58
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 59
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 60
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 61
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 62
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 63
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 64
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 65
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 66
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 67
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 68
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 69
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 70
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 71
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 72
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 73
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 74
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 75
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 76
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 77
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 78
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 79
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 80
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		4	2		2
+2	1	0		0		0		2	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 3
+
+Time is 81
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	2	1		3		1		4	2		2
+2	2	1		4		1		2	0		0
+3	1	0		0		0		1	4		4
+4	2	1		5		1		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 82
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	2	1		3		1		4	2		2
+2	2	1		4		1		2	0		0
+3	1	0		0		0		1	4		4
+4	2	1		5		1		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 83
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	3	0		0		0		5	2		2
+2	2	1		4		1		2	0		0
+3	1	0		0		0		1	4		4
+4	2	1		5		1		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 84
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	3	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	2	1		5		1		3	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 85
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	3	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 86
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 87
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 88
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 89
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 90
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 91
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 92
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 93
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 94
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 95
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 96
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 97
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 98
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 99
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 100
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 101
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 102
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 103
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 104
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 105
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 106
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 107
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 108
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 109
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 110
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 111
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 112
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 113
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 114
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 115
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 116
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 117
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 118
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 119
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 120
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 121
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 122
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 123
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 124
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 125
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 126
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 127
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 128
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 129
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 130
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 131
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 132
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 133
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 134
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 135
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 136
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 137
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 138
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 139
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 140
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 141
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 142
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 143
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 144
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 145
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 146
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 147
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 148
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 149
+OFFDUTY=N
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+
+Time is 150
+OFFDUTY=Y
+No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime
+1	1	0		0		0		5	2		2
+2	1	0		0		0		3	0		0
+3	1	0		0		0		1	4		4
+4	1	0		0		0		4	0		0
+5	5	0		0		0		0	0		0
+6	5	0		0		0		0	0		0
+7	5	0		0		0		0	0		0
+8	5	0		0		0		0	0		0
+ListLines = 1
+ListCustCount = 0
+

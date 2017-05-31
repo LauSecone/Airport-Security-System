@@ -25,12 +25,14 @@ int main() {
 		input(Time, &CurTimeNumOfCustCome, CurTimeRequestOfWindows, &State);
 		//process();
 		restornot(&QueueNum, CurTimeRequestOfWindows);
-		state_trans(CurTimeRequestOfWindows);
 		allocust(&QueueNum);
 		comeincust(&QueueNum, CurTimeNumOfCustCome);
+		state_trans(CurTimeRequestOfWindows);
 		check_quit(&State);
 		//output();
 		output(Time, QueueNum, State);
 	}
+	cout << "Completed, please check the program log" << endl;
+	system("pause");
 	return 0;
 }

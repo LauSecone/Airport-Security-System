@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 
 #define MAX_WINDOWS 10
 #define INIT_OPEN_WINDOWS 4
