@@ -10,9 +10,10 @@
 
 #include <random>
 #include "Definition.h"
+
 using namespace std;
 
-void state_trans(string CurTimeRequestOfWindows) {
+void state_trans(const string &CurTimeRequestOfWindows) {
 	int i;
 	for (i = 1; i <= MAX_WINDOWS; i++) {
 		if (windows[i].RestSignal == 1 && windows[i].State == 1) {
@@ -61,7 +62,7 @@ void state_trans(string CurTimeRequestOfWindows) {
 			}
 			break;
 		case RESTTING_PORT://休息
-			if (CurTimeRequestOfWindows[i] == '0') {
+			if (CurTimeRequestOfWindows[i] == '0') {//若未申请恢复
 				windows[i].CurStateTime++;
 				if (windows[i].CurStateTime == windows[i].ScheRestTime) {
 					windows[i].TotOffTime += windows[i].ScheRestTime;
@@ -69,7 +70,7 @@ void state_trans(string CurTimeRequestOfWindows) {
 					windows[i].TotOnTime++;
 				}
 			}
-			else if (CurTimeRequestOfWindows[i] == '1') {
+			else if (CurTimeRequestOfWindows[i] == '1') {//若申请恢复
 				windows[i].TotOffTime += windows[i].ScheRestTime;
 				windows[i].State = 1;
 				windows[i].TotOnTime++;

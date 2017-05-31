@@ -10,7 +10,7 @@ void input_via_keyboard(int, int &, string &, int &);
 void output_via_file(int, int, int);
 void output_via_keyboard(int, int, int);
 void check_quit(int &);
-void state_trans(string);
+void state_trans(const string &);
 void restornot(int *, string);
 void allocust(int *);
 void comeincust(int *, int);
