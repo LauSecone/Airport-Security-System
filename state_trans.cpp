@@ -9,9 +9,11 @@
 */
 
 #include <random>
+#include <ctime>
 #include "Definition.h"
 
 using namespace std;
+static default_random_engine e(time(NULL));
 
 void state_trans(const string &CurTimeRequestOfWindows) {
 	int i;
@@ -19,16 +21,16 @@ void state_trans(const string &CurTimeRequestOfWindows) {
 		if (windows[i].RestSignal == 1 && windows[i].State == 1) {
 			windows[i].RestSignal = 0;
 			windows[i].State = RESTTING_PORT;
-			static default_random_engine e;
+			windows[i].CurStateTime = 1;
 			static uniform_int_distribution<unsigned> u(MinRestSec, MaxRestSec);
 			windows[i].ScheRestTime = u(e);
+			return;
 		}
 		switch (windows[i].State) {
 		case AVAILABLE_PORT://空闲状态
 			windows[i].CurStateTime = 0;
 			if (windows[i].CurNum > 0) {
 				windows[i].CurStateTime = 1;
-				static default_random_engine e;
 				static uniform_int_distribution<unsigned> u(MinTimeLen, MaxTimeLen);
 				windows[i].CurCustTime = u(e);
 				windows[i].State = AVAILABLE_PORT;
@@ -50,7 +52,6 @@ void state_trans(const string &CurTimeRequestOfWindows) {
 			windows[i].CurStateTime = 1;
 			if (windows[i].CurNum > 0) {//若还有人在排队，则安排下一个人安检
 				srand(rand());
-				static default_random_engine e;
 				static uniform_int_distribution<unsigned> u(MinTimeLen, MaxTimeLen);
 				windows[i].CurCustTime = u(e);
 				windows[i].State = AVAILABLE_PORT;
@@ -66,12 +67,14 @@ void state_trans(const string &CurTimeRequestOfWindows) {
 				++windows[i].CurStateTime;
 				if (windows[i].CurStateTime == windows[i].ScheRestTime) {
 					windows[i].TotOffTime += windows[i].ScheRestTime;
+					windows[i].ScheRestTime = 0;
 					windows[i].State = SWITCHING_PORT;
 					++windows[i].TotOnTime;
 				}
 			}
-			else if (CurTimeRequestOfWindows[i] == '1') {//若申请恢复
+			else if (CurTimeRequestOfWindows[i] == 'C') {//若申请恢复
 				windows[i].TotOffTime += windows[i].ScheRestTime;
+				windows[i].ScheRestTime = 0;
 				windows[i].State = AVAILABLE_PORT;
 				++windows[i].TotOnTime;
 			}
