@@ -13,6 +13,7 @@
 #include "Definition.h"
 
 using namespace std;
+
 static default_random_engine e(time(NULL));
 
 void state_trans(const string &CurTimeRequestOfWindows) {
@@ -51,7 +52,6 @@ void state_trans(const string &CurTimeRequestOfWindows) {
 		case SWITCHING_PORT://此人安检结束，或休息刚结束。状态转换
 			windows[i].CurStateTime = 1;
 			if (windows[i].CurNum > 0) {//若还有人在排队，则安排下一个人安检
-				srand(rand());
 				static uniform_int_distribution<unsigned> u(MinTimeLen, MaxTimeLen);
 				windows[i].CurCustTime = u(e);
 				windows[i].State = AVAILABLE_PORT;
