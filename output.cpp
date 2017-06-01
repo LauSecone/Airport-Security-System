@@ -31,7 +31,7 @@ void output_via_file(const int Time, const int QueueNum, const int State) {
 				<< "		" << windows[i].TotOffTime;
 			fout << endl;
 		}
-		fout << "ListLines = " << (ceil(QueueNum / MaxCustSingleLine) != 0 ? ceil(QueueNum / MaxCustSingleLine) : 1) << endl;
+		fout << "ListLines = " << (ceil((double)QueueNum / MaxCustSingleLine) != 0 ? ceil((double)QueueNum / MaxCustSingleLine) : 1) << endl;
 		fout << "ListCustCount = " << QueueNum << endl << endl;
 	}
 	else {
@@ -61,7 +61,7 @@ void output_via_file(const int Time, const int QueueNum, const int State) {
 					<< "		" << windows[i].TotOffTime;
 				foutD << endl;
 			}
-			foutD << "ListLines = " << (ceil(QueueNum / MaxCustSingleLine) != 0 ? ceil(QueueNum / MaxCustSingleLine) : 1) << endl;
+			foutD << "ListLines = " << (ceil((double)QueueNum / MaxCustSingleLine) != 0 ? ceil((double)QueueNum / MaxCustSingleLine) : 1) << endl;
 			foutD << "ListCustCount = " << QueueNum << endl << endl;
 		}
 	}
@@ -94,7 +94,7 @@ void output_via_keyboard(const int Time, const int QueueNum, const int State) {
 				<< "		" << windows[i].TotOffTime;
 			cout << endl;
 		}
-		cout << "ListLines = " << (ceil(QueueNum / MaxCustSingleLine) != 0 ? ceil(QueueNum / MaxCustSingleLine) : 1) << endl;
+		cout << "ListLines = " << (ceil((double)QueueNum / MaxCustSingleLine) != 0 ? ceil((double)QueueNum / MaxCustSingleLine) : 1) << endl;
 		cout << "ListCustCount = " << QueueNum << endl << endl;
 	}
 }

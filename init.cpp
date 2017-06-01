@@ -28,10 +28,10 @@ void init(int &in, int &out) {
 		MaxRestSec = 5;
 
 	}
-	cout << "Please choose read method:(default is keyboard)" << endl << "1. Read via keyboard 2. Read via file" << endl << "Please write the number 1 or 2" << endl;
+	cout << "Please choose read method:(default is keyboard)" << endl << "1. Read via file 2. Read via keyboard" << endl << "Please write the number 1 or 2" << endl;
 	cin >> in;
 	--in;
-	cout << "Please choose write method:(default is keyboard)" << endl << "1. Write via keyboard 2. Write via file" << endl << "Please write the number 1 or 2" << endl;
+	cout << "Please choose write method:(default is keyboard)" << endl << "1. Write via file 2. Write via keyboard" << endl << "Please write the number 1 or 2" << endl;
 	cin >> out;
 	--out;
 	return;

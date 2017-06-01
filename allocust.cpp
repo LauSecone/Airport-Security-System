@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void allocust(int*quenum) {
+void allocust(int &quenum) {
 	int i, custtotal = 0, custneed = 0;
 	bool winstate[MAX_WINDOWS] = { 0 };
 	for (i = 1; i <= REAL_WINDOWS; i++) {
@@ -14,7 +14,7 @@ void allocust(int*quenum) {
 			custneed += MaxSeqLen;//统计安检口填满所需乘客数 
 		}
 	}
-	while (custtotal < custneed && *quenum > 0) {
+	while (custtotal < custneed && quenum > 0) {
 		int mincust = 2100000000, dest;
 		double maxeffi = -1;
 		for (i = 1; i <= REAL_WINDOWS; i++)
@@ -32,7 +32,7 @@ void allocust(int*quenum) {
 			}
 		++windows[dest].CurNum;
 		++custtotal;
-		--(*quenum);
+		--quenum;
 		//cout << dest << ' ' << windows[dest].CurNum << ' ' << *quenum << endl;
 	}
 }

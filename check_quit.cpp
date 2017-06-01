@@ -3,7 +3,7 @@
 using namespace std;
 
 void check_quit(int &State) {
-	if (State != WAIT_FOR_QUIT) {
+	if (State == ON_DUTY) {
 		return;
 	}
 	int flag = 1;
