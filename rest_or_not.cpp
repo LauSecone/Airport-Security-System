@@ -10,7 +10,7 @@ void rest_or_not(int &quenum, const string &restrequest) {
 	double cnt = 0;
 	bool requeststore[MAX_WINDOWS] = { 0 };
 	for (i = 1; i <= REAL_WINDOWS; ++i)
-		if (restrequest[i] == 'R')
+		if (g_windows[i].State != RESTTING_PORT && g_windows[i].State != CLOSE_PORT && restrequest[i] == 'R')
 			requeststore[i] = 1;
 	for (i = 1; i <= REAL_WINDOWS; ++i)
 		if (g_windows[i].State != RESTTING_PORT && g_windows[i].State != CLOSE_PORT)
