@@ -49,8 +49,9 @@ void input_via_keyboard(const int Time, int &CurTimeNumOfCustCome, string &CurTi
 	CurTimeRequestOfWindows.assign(MAX_WINDOWS, '0');
 	CurTimeNumOfCustCome = 0;
 	if ((ProcessTime < Time) && (NumOfCustCome == 0)) {
-		char ch;
-		cin >> ch >> ch >> ProcessTime;
+		cout << "T = ";
+		cin  >> ProcessTime;
+		cout << "EVENT = ";
 		string str;
 		cin >> str;
 		char sta = '0';

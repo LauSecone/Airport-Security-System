@@ -5,7 +5,7 @@ using namespace std;
 
 void allocust(int &quenum) {
 	int i, custtotal = 0, custneed = 0;
-	bool winstate[10] = {0};
+	bool winstate[REAL_WINDOWS] = { 0 };
 	for (i = 1; i <= REAL_WINDOWS; ++i)
 		if (windows[i].State != RESTTING_PORT && windows[i].State != CLOSE_PORT)
 		{
@@ -18,11 +18,11 @@ void allocust(int &quenum) {
 		double maxeffi = -1;
 		for (i = 1; i <= REAL_WINDOWS; ++i)
 			if (winstate[i] && windows[i].CurNum < mincust)
-		  		mincust = windows[i].CurNum;
+				mincust = windows[i].CurNum;
 		for (i = 1; i <= REAL_WINDOWS; ++i)
 			if (winstate[i] && windows[i].CurNum == mincust)
 			{
-				double efficiency = (double)windows[i].TotNum /(windows[i].TotServeTime + 1);
+				double efficiency = (double)windows[i].TotNum / (windows[i].TotServeTime + 1);
 				if (efficiency > maxeffi)
 				{
 					maxeffi = efficiency;

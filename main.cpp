@@ -3,6 +3,7 @@ using namespace std;
 
 struct WindowsPort windows[MAX_WINDOWS] = { 0 };
 int MaxCustSingleLine, MaxLines, MaxSeqLen, MinTimeLen, MaxTimeLen, MinRestSec, MaxRestSec;
+int AveWaitTime;
 
 void init(int &, int &);
 void input_via_file(int, int &, string &, int &);
