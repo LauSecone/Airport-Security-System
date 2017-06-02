@@ -2,6 +2,7 @@
 #include "Definition.h"
 
 using namespace std;
+
 void cust_in(int );
 
 void comeincust(int &quenum, int custnum) {

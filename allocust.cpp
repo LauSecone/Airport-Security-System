@@ -6,7 +6,7 @@ void cust_out();
 
 void allocust(int &quenum) {
 	int i, custtotal = 0, custneed = 0;
-	bool winstate[REAL_WINDOWS] = { 0 };
+	bool winstate[MAX_WINDOWS] = { 0 };
 	for (i = 1; i <= REAL_WINDOWS; ++i)
 		if (windows[i].State != RESTTING_PORT && windows[i].State != CLOSE_PORT)
 		{

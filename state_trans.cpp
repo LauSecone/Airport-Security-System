@@ -18,7 +18,7 @@ static default_random_engine e(time(NULL));
 
 void state_trans(const string &CurTimeRequestOfWindows) {
 	int i;
-	for (i = 1; i <= MAX_WINDOWS; ++i) {
+	for (i = 1; i <= REAL_WINDOWS; ++i) {
 		if (windows[i].RestSignal == 1 && windows[i].State == 1) {
 			windows[i].RestSignal = 0;
 			windows[i].State = RESTTING_PORT;
@@ -34,7 +34,7 @@ void state_trans(const string &CurTimeRequestOfWindows) {
 				windows[i].CurStateTime = 1;
 				static uniform_int_distribution<unsigned> u(MinTimeLen, MaxTimeLen);
 				windows[i].CurCustTime = u(e);
-				windows[i].State = AVAILABLE_PORT;
+				windows[i].State = CHECKING_PORT;
 			}
 			windows[i].TotOnTime++;
 			break;

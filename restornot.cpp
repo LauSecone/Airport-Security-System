@@ -3,12 +3,12 @@
 
 using namespace std;
 
-static bool reststate[REAL_WINDOWS];
+static bool reststate[MAX_WINDOWS];
 
 void restornot(int &quenum, const string &restrequest) {
 	int i, cntrequest = 0;
 	double cnt = 0;
-	bool requeststore[REAL_WINDOWS] = { 0 };
+	bool requeststore[MAX_WINDOWS] = { 0 };
 	for (i = 1; i <= REAL_WINDOWS; ++i)
 		if (restrequest[i] == 'R')
 			requeststore[i] = 1;

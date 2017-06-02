@@ -8,31 +8,34 @@ static struct WindowsPort windowsBU[MAX_WINDOWS] = { 0 };
 
 int isequal(const int &);
 
+extern int AveWaitTime;
+
 void output_via_file(const int Time, const int QueueNum, const int State) {
 	static ofstream fout("output.log", ofstream::out);
 	static ofstream foutD("outputDetail.log", ofstream::out);
-	if (fout) {
-		fout << "Time is " << Time << endl;
-		fout << "OFFDUTY=";
+	if (foutD) {
+		foutD << "Time is " << Time << endl;
+		foutD << "OFFDUTY=";
 		if (State == 0) {
-			fout << "Y" << endl;
+			foutD << "Y" << endl;
 		}
 		else {
-			fout << "N" << endl;
+			foutD << "N" << endl;
 		}
-		fout << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime" << endl;
+		foutD << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime" << endl;
 		for (int i = 1; i <= REAL_WINDOWS; ++i) {
-			fout << i << "	" << windows[i].State;
-			fout << "	" << windows[i].CurNum
+			foutD << i << "	" << windows[i].State;
+			foutD << "	" << windows[i].CurNum
 				<< "		" << windows[i].CurCustTime
 				<< "		" << windows[i].CurNum
 				<< "		" << windows[i].TotNum
 				<< "	" << windows[i].ScheRestTime
 				<< "		" << windows[i].TotOffTime;
-			fout << endl;
+			foutD << endl;
 		}
-		fout << "ListLines = " << (ceil((double)QueueNum / MaxCustSingleLine) != 0 ? ceil((double)QueueNum / MaxCustSingleLine) : 1) << endl;
-		fout << "ListCustCount = " << QueueNum << endl << endl;
+		foutD << "ListLines = " << (ceil((double)QueueNum / MaxCustSingleLine) != 0 ? ceil((double)QueueNum / MaxCustSingleLine) : 1) << endl;
+		foutD << "ListCustCount = " << QueueNum << endl;
+		foutD << "Average Waiting Time = " << AveWaitTime << endl << endl;
 	}
 	else {
 		cout << "Can't record the Output Detail Log." << endl;
@@ -62,7 +65,8 @@ void output_via_file(const int Time, const int QueueNum, const int State) {
 				fout << endl;
 			}
 			fout << "ListLines = " << (ceil((double)QueueNum / MaxCustSingleLine) != 0 ? ceil((double)QueueNum / MaxCustSingleLine) : 1) << endl;
-			fout << "ListCustCount = " << QueueNum << endl << endl;
+			fout << "ListCustCount = " << QueueNum << endl;
+			fout << "Average Waiting Time = " << AveWaitTime << endl << endl;
 		}
 	}
 	else {
@@ -94,7 +98,8 @@ void output_via_keyboard(const int Time, const int QueueNum, const int State) {
 		cout << endl;
 	}
 	cout << "ListLines = " << (ceil((double)QueueNum / MaxCustSingleLine) != 0 ? ceil((double)QueueNum / MaxCustSingleLine) : 1) << endl;
-	cout << "ListCustCount = " << QueueNum << endl << endl;
+	cout << "ListCustCount = " << QueueNum << endl;
+	cout << "Average Waiting Time = " << AveWaitTime << endl << endl;
 }
 
 int isequal(const int &Time) {

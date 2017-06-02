@@ -3,7 +3,7 @@ using namespace std;
 
 struct WindowsPort windows[MAX_WINDOWS] = { 0 };
 int MaxCustSingleLine, MaxLines, MaxSeqLen, MinTimeLen, MaxTimeLen, MinRestSec, MaxRestSec;
-int AveWaitTime;
+int AveWaitTime = 0;
 
 void init(int &, int &);
 void input_via_file(int, int &, string &, int &);
@@ -16,14 +16,16 @@ void restornot(int &, const string &);
 void allocust(int &);
 void comeincust(int &, int);
 
+int Time = 0;
+
 int main() {
 	int State = ON_DUTY, QueueNum = 0, in = 0, out = 0;
 	string CurTimeRequestOfWindows(MAX_WINDOWS, '0');
 	init(in, out);
 	int CurTimeNumOfCustCome = 0;
 	while (State) {
-		int Time = 0;
 		++Time;
+		//cout << Time << endl;
 		//init();
 		if (in) {
 			input_via_keyboard(Time, CurTimeNumOfCustCome, CurTimeRequestOfWindows, State);
@@ -37,7 +39,6 @@ int main() {
 		comeincust(QueueNum, CurTimeNumOfCustCome);
 		state_trans(CurTimeRequestOfWindows);
 		check_quit(State);
-		//cout << Time << ' ' << windows[4].CurStateTime << endl;
 		//output();
 		if (out) {
 			output_via_keyboard(Time, QueueNum, State);
