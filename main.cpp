@@ -17,12 +17,12 @@ void allocust(int &);
 void comeincust(int &, int);
 
 int main() {
-	int Time = 0;
 	int State = ON_DUTY, QueueNum = 0, in = 0, out = 0;
 	string CurTimeRequestOfWindows(MAX_WINDOWS, '0');
 	init(in, out);
 	int CurTimeNumOfCustCome = 0;
 	while (State) {
+		int Time = 0;
 		++Time;
 		//init();
 		if (in) {

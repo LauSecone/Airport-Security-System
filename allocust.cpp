@@ -2,6 +2,7 @@
 #include "Definition.h"
 
 using namespace std;
+void cust_out();
 
 void allocust(int &quenum) {
 	int i, custtotal = 0, custneed = 0;
@@ -30,6 +31,7 @@ void allocust(int &quenum) {
 				}
 			}
 		++windows[dest].CurNum;
+		cust_out();
 		++custtotal;
 		--quenum;
 	}
