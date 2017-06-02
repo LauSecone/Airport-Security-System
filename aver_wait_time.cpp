@@ -5,23 +5,27 @@
 
 using namespace std;
 
-extern int AveWaitTime, Time;
-static int TotCustNum = 0, TotWaitTime = 0;
+extern int g_AveWaitTime, g_Time;
+static int s_TotCustNum = 0, s_TotWaitTime = 0;
 
-static queue<int> CustInLine;
+static queue<int> s_CustInLine;
 
-void cust_in(int InNum) {
+void cust_in(int InNum,int quenum) {
 	int i;
+	if (quenum == 0) {
+		++s_TotCustNum;
+		g_AveWaitTime = ceil((double)s_TotWaitTime / s_TotCustNum);
+	}
 	for (i = 0; i <= InNum - 1; ++i) {
-		CustInLine.push(Time);
+		s_CustInLine.push(g_Time);
 	}
 	return;
 }
 
 void cust_out() {
-	++TotCustNum;
-	TotWaitTime += Time -CustInLine.back();
-	CustInLine.pop();
-	AveWaitTime = ceil((double)TotWaitTime / TotCustNum);
+	++s_TotCustNum;
+	s_TotWaitTime += g_Time - s_CustInLine.back();
+	s_CustInLine.pop();
+	g_AveWaitTime = ceil((double)s_TotWaitTime / s_TotCustNum);
 	return;
 }

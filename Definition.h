@@ -33,7 +33,7 @@ struct WindowsPort {
 	int TotServeTime, TotNum, ScheRestTime, RestSignal, TotRestTime;
 };
 
-extern int MaxCustSingleLine, MaxLines, MaxSeqLen, MinTimeLen, MaxTimeLen, MinRestSec, MaxRestSec;
-extern struct WindowsPort windows[MAX_WINDOWS];
+extern int g_MaxCustSingleLine, g_MaxLines, g_MaxSeqLen, g_MinTimeLen, g_MaxTimeLen, g_MinRestSec, g_MaxRestSec;
+extern struct WindowsPort g_windows[MAX_WINDOWS];
 
 #endif

@@ -8,7 +8,7 @@ void check_quit(int &State) {
 	}
 	int flag = 1;
 	for (int i = 1; i <= 8; ++i) {
-		if (windows[i].CurNum != 0) {
+		if (g_windows[i].CurNum != 0) {
 			flag = 0;
 		}
 	}
