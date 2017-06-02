@@ -1,5 +1,6 @@
 #include <iostream>
 #include <queue>
+#include <cmath>
 #include "Definition.h"
 
 using namespace std;
@@ -7,7 +8,7 @@ using namespace std;
 extern int AveWaitTime, Time;
 static int TotCustNum = 0, TotWaitTime = 0;
 
-queue<int> CustInLine;
+static queue<int> CustInLine;
 
 void cust_in(int InNum) {
 	int i;
@@ -19,8 +20,8 @@ void cust_in(int InNum) {
 
 void cust_out() {
 	++TotCustNum;
-	TotWaitTime += CustInLine.back();
+	TotWaitTime += Time -CustInLine.back();
 	CustInLine.pop();
-	AveWaitTime = TotWaitTime / TotCustNum;
+	AveWaitTime = ceil((double)TotWaitTime / TotCustNum);
 	return;
 }
