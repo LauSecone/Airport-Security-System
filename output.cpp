@@ -61,11 +61,11 @@ void output(const int QueueNum, const int State, int out) {
 				//输出时间，上下班状态
 				fout << "Time is " << g_Time;
 				fout << "	OFFDUTY=";
-				if (State == 0) {
-					fout << "Y";
+				if (State == 1) {
+					fout << "N";
 				}
 				else {
-					fout << "N";
+					fout << "Y";
 				}
 				fout << endl;
 				//输出抬头
@@ -100,11 +100,11 @@ void output(const int QueueNum, const int State, int out) {
 		//输出时间，上下班状态
 		cout << "Time is " << g_Time;
 		cout << "	OFFDUTY=";
-		if (State == 0) {
-			cout << "Y";
+		if (State == 1) {
+			cout << "N";
 		}
 		else {
-			cout << "N";
+			cout << "Y";
 		}
 		cout << endl;
 		//输出抬头
