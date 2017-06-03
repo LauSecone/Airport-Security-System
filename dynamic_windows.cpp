@@ -14,9 +14,11 @@ void dynamic_windows(const int queuenum, string &CloseRequest) {
 		if (queuenum >= OpenWindows * 3) {
 			++NeedWindows;
 		}
+		/*
 		if (queuenum <= OpenWindows * 2) {
 			--NeedWindows;
 		}
+		*/
 	}
 	for (i = 5; i <= REAL_WINDOWS; ++i) {
 		if (g_windows[i].CurNum != 0) {

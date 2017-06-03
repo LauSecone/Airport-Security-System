@@ -34,9 +34,11 @@ void init(int &in, int &out) {
 
 	}
 	//让用户选择输入输出方式。若出现无效输入，则默认使用键盘输入输出
-	cout << "Please choose read method:(default is keyboard)" << endl << "1. Read via file 2. Read via keyboard 3.Creat date via Poison" << endl << "Please write the number 1 / 2 or 3 :";
+	cout << "Please choose read method:(default is keyboard)" << endl 
+		<< "1. Read via file 2. Read via keyboard 3.Creat date via Poison 4.Using Multithreading" << endl 
+		<< "Please write the number 1 / 2 / 3 or 4:";
 	cin >> in;
-	if (in < 1 && in > 3) {
+	if (in < 1 && in > 4) {
 		cout << "Error read method, default set as via keyboard";
 		in = 1;
 	}
@@ -51,7 +53,9 @@ void init(int &in, int &out) {
 		set_lamda(lamda, QuitTime);
 	}
 	cout << endl;
-	cout << "Please choose write method:(default is monitor)" << endl << "1. Write via file 2. Write via monitor" << endl << "Please write the number 1 or 2 :";
+	cout << "Please choose write method:(default is monitor)" << endl 
+		<< "1. Write via file 2. Write via monitor" << endl 
+		<< "Please write the number 1 or 2 :";
 	cin >> out;
 	if (out < 1 && out > 2) {
 		cout << "Error write method, default set as via monitor";

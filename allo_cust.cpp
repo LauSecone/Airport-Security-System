@@ -5,11 +5,11 @@ using namespace std;
 
 void cust_out();
 
-void allo_cust(int &quenum,const string &CloseRequest) {
+void allo_cust(int &quenum, const string &CloseRequest) {
 	int i, custtotal = 0, custneed = 0;
 	bool winstate[MAX_WINDOWS] = { 0 };//存储安检口的具体状态 
 	for (i = 1; i <= REAL_WINDOWS; ++i)
-		if (g_windows[i].State != RESTTING_PORT && g_windows[i].State != CLOSE_PORT && CloseRequest[i] != 'X')
+		if (g_windows[i].State != RESTTING_PORT && g_windows[i].State != CLOSE_PORT && CloseRequest[i] != 'X' && g_windows[i].RestSignal != 1 )
 		{
 			winstate[i] = 1;//统计安检口状态
 			custtotal += g_windows[i].CurNum;//统计安检口乘客总数

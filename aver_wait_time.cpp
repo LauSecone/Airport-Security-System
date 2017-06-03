@@ -1,4 +1,3 @@
-#include <iostream>
 #include <queue>
 #include <cmath>
 #include "Definition.h"
@@ -28,7 +27,7 @@ void cust_out() {
 	//统计人数
 	++s_TotCustNum;
 	//出栈，统计时间
-	s_TotWaitTime += g_Time - s_CustInLine.back();
+	s_TotWaitTime += g_Time - s_CustInLine.front();
 	s_CustInLine.pop();
 	//计算期望等待时间
 	g_AveWaitTime = (int)ceil((double)s_TotWaitTime / s_TotCustNum);

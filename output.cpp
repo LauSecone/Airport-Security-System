@@ -27,7 +27,7 @@ void output(const int QueueNum, const int State, int out) {
 			}
 			foutD << endl;
 			//输出抬头
-			foutD << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime" << endl;
+			foutD << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime	RestSingal" << endl;
 			//输出详细数据
 			for (int i = 1; i <= REAL_WINDOWS; ++i) {
 				foutD << i << "	" << g_windows[i].State;
@@ -36,7 +36,8 @@ void output(const int QueueNum, const int State, int out) {
 					<< "		" << g_windows[i].CurNum
 					<< "		" << g_windows[i].TotNum
 					<< "	" << g_windows[i].ScheRestTime
-					<< "		" << g_windows[i].TotOffTime;
+					<< "		" << g_windows[i].TotOffTime
+					<< "		" << g_windows[i].RestSignal;
 				foutD << endl;
 			}
 			//输出蛇形队列个数，等待人数，期望等待时间
@@ -69,7 +70,7 @@ void output(const int QueueNum, const int State, int out) {
 				}
 				fout << endl;
 				//输出抬头
-				fout << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime" << endl;
+				fout << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime	RestSignal" << endl;
 				//输出详细数据
 				for (int i = 1; i <= REAL_WINDOWS; ++i) {
 					fout << i << "	" << g_windows[i].State;
@@ -78,7 +79,8 @@ void output(const int QueueNum, const int State, int out) {
 						<< "		" << g_windows[i].CurNum
 						<< "		" << g_windows[i].TotNum
 						<< "	" << g_windows[i].ScheRestTime
-						<< "		" << g_windows[i].TotOffTime;
+						<< "		" << g_windows[i].TotOffTime
+						<< "		" << g_windows[i].RestSignal;
 					fout << endl;
 				}
 				//输出蛇形队列个数，等待人数，期望等待时间
@@ -108,7 +110,7 @@ void output(const int QueueNum, const int State, int out) {
 		}
 		cout << endl;
 		//输出抬头
-		cout << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime" << endl;
+		cout << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime	RestSignal" << endl;
 		//输出详细数据
 		for (int i = 1; i <= REAL_WINDOWS; ++i) {
 			cout << i << "	" << g_windows[i].State;
@@ -117,7 +119,8 @@ void output(const int QueueNum, const int State, int out) {
 				<< "		" << g_windows[i].CurNum
 				<< "		" << g_windows[i].TotNum
 				<< "	" << g_windows[i].ScheRestTime
-				<< "		" << g_windows[i].TotOffTime;
+				<< "		" << g_windows[i].TotOffTime
+				<< "		" << g_windows[i].RestSignal;
 			cout << endl;
 		}
 		//输出蛇形队列个数，等待人数，期望等待时间
