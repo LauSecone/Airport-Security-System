@@ -16,15 +16,15 @@ void come_in_cust(int &, int);
 void dynamic_windows(const int,string &);
 
 int main() {
-	//≥ı ºªØ
+	//init
 	int State = ON_DUTY, QueueNum = 0, in = 0, out = 0;
 	init(in, out);
 	while (State) {
 		++g_Time;
-		//”√”⁄±£¥Êµ±«∞ ±øÃµƒ ‰»Î ˝æ›
+		//��ʼ����ǰʱ����������
 		string CurTimeRequestOfWindows(MAX_WINDOWS, '0');
 		int CurTimeNumOfCustCome = 0;
-		//input();
+		//input
 		input(CurTimeNumOfCustCome, CurTimeRequestOfWindows, State, in);
 		//process();
 		rest_or_not(QueueNum, CurTimeRequestOfWindows);

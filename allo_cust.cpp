@@ -12,7 +12,7 @@ void allo_cust(int &quenum,const string &CloseRequest) {
 		if (g_windows[i].State != RESTTING_PORT && g_windows[i].State != CLOSE_PORT && CloseRequest[i] != 'X')
 		{
 			winstate[i] = 1;
-			custtotal += g_windows[i].CurNum;//Õ≥º∆∞≤ºÏø⁄≥ÀøÕ◊‹ ˝ 
+			custtotal += g_windows[i].CurNum;//Õ≥º∆∞≤ºÏø⁄≥ÀøÕ◊‹ �?
 			custneed += g_MaxSeqLen;//Õ≥º∆∞≤ºÏø⁄ÃÓ¬˙À˘–Ë≥ÀøÕ ˝ 
 		}
 	while (custtotal < custneed && quenum > 0) {

@@ -2,6 +2,8 @@
 
 using namespace std;
 
+void set_lamda(double);
+
 void init(int &in, int &out) {
 	//将前四个安检口置为可用
 	for (int i = 1; i <= INIT_OPEN_WINDOWS; ++i) {
@@ -39,6 +41,12 @@ void init(int &in, int &out) {
 		in = 1;
 	}
 	--in;
+	if (in == CREAT_VIA_POISSON) {
+		cout << "Please input lamda :";
+		double lamda;
+		cin >> lamda;
+		set_lamda(lamda);
+	}
 	cout << "Please choose write method:(default is keyboard)" << endl << "1. Write via file 2. Write via keyboard" << endl << "Please write the number 1 or 2" << endl;
 	cin >> out;
 	if (out < 1 && out > 2) {

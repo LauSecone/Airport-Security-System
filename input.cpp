@@ -8,9 +8,10 @@ extern int g_Time;
 
 static string s_RequestOfWindows(MAX_WINDOWS, '0');
 static int s_NumOfCustCome = 0, s_ProcessTime = 0, s_status = ON_DUTY;
-static double lamda = 1;
+static double s_lamda = 1;
 
 void process_request_string(string &);
+void set_lamda(double);
 
 void input(int &CurTimeNumOfCustCome, string &CurTimeRequestOfWindows, int &state, int in) {
 	//若发出下班命令，跳过读入
@@ -71,7 +72,9 @@ void input(int &CurTimeNumOfCustCome, string &CurTimeRequestOfWindows, int &stat
 		return;
 	}
 	if (in == CREAT_VIA_POISSON) {
-		//CurTimeNumOfCustCome
+		static poisson_distribution<int> s_p(s_lamda);
+		static default_random_engine s_e((unsigned int)time(0));
+		CurTimeNumOfCustCome = s_p(s_e);
 	}
 }
 
@@ -88,5 +91,10 @@ void process_request_string(string &str) {
 			s_RequestOfWindows[iter - '0'] = sta;
 		}
 	}
+	return;
+}
+
+void set_lamda(double lam) {
+	s_lamda = lam;
 	return;
 }
