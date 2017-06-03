@@ -54,7 +54,7 @@ void state_trans(const string &CurTimeRequestOfWindows) {
 			if (g_windows[i].CurNum > 0) {//若还有人在排队，则安排下一个人安检
 				static uniform_int_distribution<unsigned> u(g_MinTimeLen, g_MaxTimeLen);
 				g_windows[i].CurCustTime = u(e);
-				g_windows[i].State = AVAILABLE_PORT;
+				g_windows[i].State = CHECKING_PORT;
 				g_windows[i].TotOnTime++;
 			}
 			else if (g_windows[i].CurNum == 0) {//若没有人排队
