@@ -22,6 +22,7 @@
 
 #define READ_VIA_FILE 0
 #define READ_VIA_KEYBOARD 1
+#define CREAT_VIA_POISSON 2
 #define WRITE_VIA_FILE 0
 #define WRITE_VIA_KEYBOARD 1
 

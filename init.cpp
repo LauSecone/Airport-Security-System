@@ -32,11 +32,19 @@ void init(int &in, int &out) {
 
 	}
 	//让用户选择输入输出方式。若出现无效输入，则默认使用键盘输入输出
-	cout << "Please choose read method:(default is keyboard)" << endl << "1. Read via file 2. Read via keyboard" << endl << "Please write the number 1 or 2" << endl;
+	cout << "Please choose read method:(default is keyboard)" << endl << "1. Read via file 2. Read via keyboard 3.Creat date via Poison" << endl << "Please write the number 1 or 2" << endl;
 	cin >> in;
+	if (in < 1 && in > 3) {
+		cout << "Error read method, default set as via keyboard";
+		in = 1;
+	}
 	--in;
 	cout << "Please choose write method:(default is keyboard)" << endl << "1. Write via file 2. Write via keyboard" << endl << "Please write the number 1 or 2" << endl;
 	cin >> out;
+	if (out < 1 && out > 2) {
+		cout << "Error write method, default set as via keyboard";
+		out = 1;
+	}
 	--out;
 	return;
 }
