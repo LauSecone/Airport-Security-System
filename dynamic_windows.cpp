@@ -16,8 +16,12 @@ void dynamic_windows(const int queuenum,string &CloseRequest){
         }
     }
     for (i=5;i<=REAL_WINDOWS;++i){
-        g_windows[i].State = CLOSE_PORT;
-        CloseRequest[i] = 'X';
+        if(!g_windows[i].CurNum){
+            CloseRequest[i] = 'X';
+        }
+        else{
+            g_windows[i].State = CLOSE_PORT;
+        }
     }
     for (i=5;i<=NeedWindows+4 ;++i){
         if(g_windows[i].State == CLOSE_PORT){
