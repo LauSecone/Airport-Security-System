@@ -1,6 +1,6 @@
 #pragma once
-#ifndef DEFINITION_H
-#define DEFINITION_H
+#ifndef DEFINITION_H_
+#define DEFINITION_H_
 
 #include <iostream>
 #include <string>
@@ -24,7 +24,7 @@
 #define READ_VIA_KEYBOARD 1
 #define CREAT_VIA_POISSON 2
 #define WRITE_VIA_FILE 0
-#define WRITE_VIA_KEYBOARD 1
+#define WRITE_VIA_MONITOR 1
 
 struct WindowsPort {
 	int State;
@@ -38,3 +38,4 @@ extern int g_MaxCustSingleLine, g_MaxLines, g_MaxSeqLen, g_MinTimeLen, g_MaxTime
 extern struct WindowsPort g_windows[MAX_WINDOWS];
 
 #endif
+//DEFINITION_H_

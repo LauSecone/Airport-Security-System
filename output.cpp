@@ -96,7 +96,7 @@ void output(const int QueueNum, const int State, int out) {
 			cout << "Can't record the Output Log" << endl;
 		}
 	}
-	if (out == WRITE_VIA_KEYBOARD) {
+	if (out == WRITE_VIA_MONITOR) {
 		//输出时间，上下班状态
 		cout << "Time is " << g_Time;
 		cout << "	OFFDUTY=";

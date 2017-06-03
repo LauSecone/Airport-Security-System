@@ -9,9 +9,10 @@ extern int g_Time;
 static string s_RequestOfWindows(MAX_WINDOWS, '0');
 static int s_NumOfCustCome = 0, s_ProcessTime = 0, s_status = ON_DUTY;
 static double s_lamda = 1;
+static int s_quittime = 0;
 
 void process_request_string(string &);
-void set_lamda(double);
+void set_lamda(double, int);
 
 void input(int &CurTimeNumOfCustCome, string &CurTimeRequestOfWindows, int &state, int in) {
 	//若发出下班命令，跳过读入
@@ -72,10 +73,17 @@ void input(int &CurTimeNumOfCustCome, string &CurTimeRequestOfWindows, int &stat
 		return;
 	}
 	if (in == CREAT_VIA_POISSON) {
+		//清空数据
+		CurTimeRequestOfWindows.assign(MAX_WINDOWS, '0');
+		//用泊松分布生成到来乘客人数
 		static poisson_distribution<int> s_p(s_lamda);
 		static default_random_engine s_e((unsigned int)time(0));
 		CurTimeNumOfCustCome = s_p(s_e);
+		if (g_Time == s_quittime) {
+			state = WAIT_FOR_QUIT;
+		}
 	}
+	return;
 }
 
 void process_request_string(string &str) {
@@ -94,7 +102,8 @@ void process_request_string(string &str) {
 	return;
 }
 
-void set_lamda(double lam) {
+void set_lamda(double lam, int quittime) {
 	s_lamda = lam;
+	s_quittime = quittime;
 	return;
 }
