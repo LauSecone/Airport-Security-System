@@ -5,15 +5,15 @@ using namespace std;
 
 void cust_out();
 
-void allo_cust(int &quenum) {
+void allo_cust(int &quenum,const string &CloseRequest) {
 	int i, custtotal = 0, custneed = 0;
 	bool winstate[MAX_WINDOWS] = { 0 };
 	for (i = 1; i <= REAL_WINDOWS; ++i)
-		if (g_windows[i].State != RESTTING_PORT && g_windows[i].State != CLOSE_PORT)
+		if (g_windows[i].State != RESTTING_PORT && g_windows[i].State != CLOSE_PORT && CloseRequest[i] != 'X')
 		{
 			winstate[i] = 1;
-			custtotal += g_windows[i].CurNum;//Í³¼Æ°²¼ì¿Ú³Ë¿Í×ÜÊý 
-			custneed += g_MaxSeqLen;//Í³¼Æ°²¼ì¿ÚÌîÂúËùÐè³Ë¿ÍÊý 
+			custtotal += g_windows[i].CurNum;//Ã•â‰¥Âºâˆ†âˆžâ‰¤ÂºÃÃ¸â„â‰¥Ã€Ã¸Ã•â—Šâ€¹Â Ë 
+			custneed += g_MaxSeqLen;//Ã•â‰¥Âºâˆ†âˆžâ‰¤ÂºÃÃ¸â„ÃƒÃ“Â¬Ë™Ã€Ë˜â€“Ã‹â‰¥Ã€Ã¸Ã•Â Ë 
 		}
 	while (custtotal < custneed && quenum > 0) {
 		int mincust = 2100000000, dest;
