@@ -27,13 +27,19 @@ void output(const int QueueNum, const int State, int out) {
 			}
 			foutD << endl;
 			//输出抬头
-			foutD << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime	RestSingal" << endl;
+			foutD << "No.	State		CurNum	CurCustTime	Tot	ScheRestTime	TotOffTime	RestSingal" << endl;
 			//输出详细数据
 			for (int i = 1; i <= REAL_WINDOWS; ++i) {
-				foutD << i << "	" << g_windows[i].State;
+				foutD << i << "	";
+				switch (g_windows[i].State) {
+				case 1: foutD << "AVAILABLE"; break;
+				case 2: foutD << "CHECKING "; break;
+				case 3: foutD << "SWITCHING"; break;
+				case 4: foutD << "RESTTING "; break;
+				case 5: foutD << "CLOSE    "; break;
+				}
 				foutD << "	" << g_windows[i].CurNum
-					<< "		" << g_windows[i].CurCustTime
-					<< "		" << g_windows[i].CurNum
+					<< "	" << g_windows[i].CurCustTime
 					<< "		" << g_windows[i].TotNum
 					<< "	" << g_windows[i].ScheRestTime
 					<< "		" << g_windows[i].TotOffTime
@@ -70,13 +76,19 @@ void output(const int QueueNum, const int State, int out) {
 				}
 				fout << endl;
 				//输出抬头
-				fout << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime	RestSignal" << endl;
+				fout << "No.	State		CurNum	CurCustTime	Tot	ScheRestTime	TotOffTime	RestSingal" << endl;
 				//输出详细数据
 				for (int i = 1; i <= REAL_WINDOWS; ++i) {
-					fout << i << "	" << g_windows[i].State;
+					fout << i << "	";
+					switch (g_windows[i].State) {
+					case 1: fout << "AVAILABLE"; break;
+					case 2: fout << "CHECKING "; break;
+					case 3: fout << "SWITCHING"; break;
+					case 4: fout << "RESTTING "; break;
+					case 5: fout << "CLOSE    "; break;
+					}
 					fout << "	" << g_windows[i].CurNum
-						<< "		" << g_windows[i].CurCustTime
-						<< "		" << g_windows[i].CurNum
+						<< "	" << g_windows[i].CurCustTime
 						<< "		" << g_windows[i].TotNum
 						<< "	" << g_windows[i].ScheRestTime
 						<< "		" << g_windows[i].TotOffTime
@@ -110,13 +122,19 @@ void output(const int QueueNum, const int State, int out) {
 		}
 		cout << endl;
 		//输出抬头
-		cout << "No.	State	CurNum	CurCustTime	WinListCustCount	Tot	ScheRestTime	TotOffTime	RestSignal" << endl;
+		cout << "No.	State		CurNum	CurCustTime	Tot	ScheRestTime	TotOffTime	RestSingal" << endl;
 		//输出详细数据
 		for (int i = 1; i <= REAL_WINDOWS; ++i) {
-			cout << i << "	" << g_windows[i].State;
+			cout << i << "	";
+			switch (g_windows[i].State) {
+			case 1: cout << "AVAILABLE"; break;
+			case 2: cout << "CHECKING "; break;
+			case 3: cout << "SWITCHING"; break;
+			case 4: cout << "RESTTING "; break;
+			case 5: cout << "CLOSE    "; break;
+			}
 			cout << "	" << g_windows[i].CurNum
-				<< "		" << g_windows[i].CurCustTime
-				<< "		" << g_windows[i].CurNum
+				<< "	" << g_windows[i].CurCustTime
 				<< "		" << g_windows[i].TotNum
 				<< "	" << g_windows[i].ScheRestTime
 				<< "		" << g_windows[i].TotOffTime

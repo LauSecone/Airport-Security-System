@@ -95,6 +95,7 @@ void input(int &CurTimeNumOfCustCome, string &CurTimeRequestOfWindows, int &stat
 		CurTimeNumOfCustCome = 0;
 		g_m.lock();
 		process_request_string(str);
+		cout << endl;
 		str.clear();
 		g_m.unlock();
 		CurTimeRequestOfWindows = s_RequestOfWindows;
