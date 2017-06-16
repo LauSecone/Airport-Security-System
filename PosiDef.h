@@ -29,6 +29,9 @@
 //Lamda
 #define L_X 0
 #define L_Y 140
+#define S_LEN 1 //Space Length
+#define SS_LEN 1 //Side of Squire Length
+
 //Read Via File Botten
 #define RVF_X 1
 #define RVF_Y 1
@@ -38,33 +41,16 @@
 //Creat Via Poisson Botten
 #define CVP_X 1
 #define CVP_Y 1
-
-#define S_LEN 1 //Space Length
-#define SS_LEN 1 //Side of Squire Length
 //Choose Botten Size
 #define CBX 1
 #define CBY 1
 
 //Windows Rest Position
-#define W1_X 1
-#define W1_Y 1
-#define W2_X 1
-#define W2_Y 1
-#define W3_X 1
-#define W3_Y 1
-#define W4_X 1
-#define W4_Y 1
-#define W5_X 1
-#define W5_Y 1
-#define W6_X 1
-#define W6_Y 1
-#define W7_X 1
-#define W7_Y 1
-#define W8_X 1
-#define W8_Y 1
+#define W_X 1
+#define W_Y 1
 #define WX 1
 #define WY 1
-#define WD 1
+#define WD_Y 1 //Windows Distence On Y
 
 //Event Butten
 #define CC1_X 1

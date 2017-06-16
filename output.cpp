@@ -190,7 +190,7 @@ void block_button(int state) {
 	}
 	for (int i = 0; i < REAL_WINDOWS; ++i) {
 		if (g_windows[i + 1].State == CLOSE_PORT || g_windows[i + 1].RestSignal == 1) {
-			imagefilter_blurring(NULL, 0x00, 0x50, W1_X, W1_Y + WD * i, W1_X + WX, W1_Y + WD * i + WY);
+			imagefilter_blurring(NULL, 0x00, 0x50, W_X, W_Y + WD_Y * i, W_X + WX, W_Y + WD_Y * i + WY);
 		}
 	}
 	return;
