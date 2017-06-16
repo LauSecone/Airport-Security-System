@@ -1,9 +1,13 @@
+#include "graphics.h"
+#include "PosiDef.h"
+#include "Definition.h"
 #include <random>
 #include <ctime>
 #include <conio.h>
 #include <thread>
 #include <mutex>
-#include "Definition.h"
+#include <fstream>
+#include <iostream>
 
 using namespace std;
 
@@ -13,16 +17,20 @@ static string s_RequestOfWindows(MAX_WINDOWS, '0'), str;
 static int s_NumOfCustCome = 0, s_ProcessTime = 0, s_status = ON_DUTY;
 static double s_lamda = 1;
 static int s_quittime = 0;
-extern mutex g_m;
 
 void process_request_string(string &);
-void set_lamda(double, int);
+void set_lamda_quittime(double, int);
 void read_char();
+int on_button(int, int, int, int, int, int);
+void judge_rest(int, int, int, mouse_msg);
+void come_cust(int, int, int, mouse_msg);
+void judge_quit(int, int, mouse_msg);
+void push_data(string &, int &, int &);
 
-void input(int &CurTimeNumOfCustCome, string &CurTimeRequestOfWindows, int &state, int in) {
+void input(int &CurTimeNumOfCustCome, string &CurTimeRequestOfWindows, int &state, int in_mode) {
 	//若发出下班命令，跳过读入
 	if (state == WAIT_FOR_QUIT) return;
-	if (in == READ_VIA_FILE) {
+	if (in_mode == READ_VIA_FILE) {
 		CurTimeRequestOfWindows.assign(MAX_WINDOWS, '0');
 		CurTimeNumOfCustCome = 0;
 		//若保存的数据已经过时，读取新的数据
@@ -43,15 +51,11 @@ void input(int &CurTimeNumOfCustCome, string &CurTimeRequestOfWindows, int &stat
 		}
 		//若保存的数据恰好是当前时间，推送
 		if (s_ProcessTime == g_Time) {
-			CurTimeRequestOfWindows = s_RequestOfWindows;
-			CurTimeNumOfCustCome = s_NumOfCustCome;
-			state = s_status;
-			s_NumOfCustCome = 0;
-			s_RequestOfWindows.assign(MAX_WINDOWS, '0');
+			push_data(CurTimeRequestOfWindows, CurTimeNumOfCustCome, state);
 		}
 		return;
 	}
-	if (in == READ_VIA_KEYBOARD) {
+	if (in_mode == READ_VIA_KEYBOARD) {
 		//清零与初始化相关变量
 		CurTimeRequestOfWindows.assign(MAX_WINDOWS, '0');
 		CurTimeNumOfCustCome = 0;
@@ -69,15 +73,11 @@ void input(int &CurTimeNumOfCustCome, string &CurTimeRequestOfWindows, int &stat
 		}
 		//若保存的数据恰好是当前时间，推送
 		if (s_ProcessTime == g_Time) {
-			CurTimeRequestOfWindows = s_RequestOfWindows;
-			CurTimeNumOfCustCome = s_NumOfCustCome;
-			state = s_status;
-			s_NumOfCustCome = 0;
-			s_RequestOfWindows.assign(MAX_WINDOWS, '0');
+			push_data(CurTimeRequestOfWindows, CurTimeNumOfCustCome, state);
 		}
 		return;
 	}
-	if (in == CREAT_VIA_POISSON) {
+	if (in_mode == CREAT_VIA_POISSON) {
 		//清空数据
 		CurTimeRequestOfWindows.assign(MAX_WINDOWS, '0');
 		//用泊松分布生成到来乘客人数
@@ -89,22 +89,34 @@ void input(int &CurTimeNumOfCustCome, string &CurTimeRequestOfWindows, int &stat
 			state = WAIT_FOR_QUIT;
 		}
 	}
-	if (in == USE_THREAD) {
-		this_thread::sleep_for(chrono::seconds(1));
+	if (in_mode == READ_USE_THREAD) {
+		//init
 		CurTimeRequestOfWindows.assign(MAX_WINDOWS, '0');
 		CurTimeNumOfCustCome = 0;
-		g_m.lock();
+		//process input
 		process_request_string(str);
 		cout << endl;
 		str.clear();
-		g_m.unlock();
-		CurTimeRequestOfWindows = s_RequestOfWindows;
-		CurTimeNumOfCustCome = s_NumOfCustCome;
-		state = s_status;
-		s_NumOfCustCome = 0;
-		s_RequestOfWindows.assign(MAX_WINDOWS, '0');
+		//push input data
+		push_data(CurTimeRequestOfWindows, CurTimeNumOfCustCome, state);
+	}
+	if (in_mode == READ_VIA_GRAPH) {
+		//init
+		CurTimeRequestOfWindows.assign(MAX_WINDOWS, '0');
+		CurTimeNumOfCustCome = 0;
+		//push the data
+		push_data(CurTimeRequestOfWindows, CurTimeNumOfCustCome, state);
 	}
 	return;
+}
+
+void push_data(string &CurTimeRequestOfWindows, int &CurTimeNumOfCustCome, int &state) {
+	CurTimeRequestOfWindows = s_RequestOfWindows;
+	CurTimeNumOfCustCome = s_NumOfCustCome;
+	state = s_status;
+	//clean the cache
+	s_NumOfCustCome = 0;
+	s_RequestOfWindows.assign(MAX_WINDOWS, '0');
 }
 
 void process_request_string(string &str) {
@@ -123,19 +135,64 @@ void process_request_string(string &str) {
 	return;
 }
 
-void set_lamda(double lam, int quittime) {
+void set_lamda_quittime(double lam, int quittime) {
 	s_lamda = lam;
 	s_quittime = quittime;
 	return;
 }
 
+void set_lamda(double lam) {
+	s_lamda = lam;
+	return;
+}
+
 void read_char() {
 	while (s_status != WAIT_FOR_QUIT) {
-		//g_m.lock();
 		char ch;
 		ch = (char)_getche();
 		str = str + ch;
-		//g_m.unlock();
+	}
+	return;
+}
+
+void mouse_event() {
+	mouse_msg msg = { 0 };
+	while (s_status != WAIT_FOR_QUIT) {
+		msg = getmouse();
+		flushmouse();
+		judge_rest(1, W1_X, W1_Y, msg);
+		judge_rest(2, W2_X, W2_Y, msg);
+		judge_rest(3, W3_X, W3_Y, msg);
+		judge_rest(4, W4_X, W4_Y, msg);
+		judge_rest(5, W5_X, W5_Y, msg);
+		judge_rest(6, W6_X, W6_Y, msg);
+		judge_rest(7, W7_X, W7_Y, msg);
+		judge_rest(8, W8_X, W8_Y, msg);
+		come_cust(1, CC1_X, CC1_Y, msg);
+		come_cust(5, CC5_Y, CC5_Y, msg);
+		judge_quit(Q_X, Q_Y, msg);
+	}
+	return;
+}
+
+void judge_rest(int num, int x, int y, mouse_msg msg) {
+	if (msg.is_left() && msg.is_up() && on_button(msg.x, msg.y, x, x + WX, y, y + WY)) {
+		s_RequestOfWindows[num] = 'R';
+	}
+	return;
+}
+
+void come_cust(int num, int x, int y, mouse_msg msg) {
+	if (msg.is_left() && msg.is_up() && on_button(msg.x, msg.y, x, x + EBX, y, y + EBY)) {
+		++s_NumOfCustCome;
+	}
+	return;
+}
+
+void judge_quit(int x, int y, mouse_msg msg) {
+	if (msg.is_left() && msg.is_up() && on_button(msg.x, msg.y, x, x + EBX, y, y + EBY)) {
+		s_status = WAIT_FOR_QUIT;
+		s_quittime = g_Time;
 	}
 	return;
 }

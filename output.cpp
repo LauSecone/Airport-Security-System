@@ -1,14 +1,20 @@
+#include "Definition.h"
+#include "graphics.h"
+#include "PosiDef.h"
 #include <cmath>
 #include <fstream>
-#include "Definition.h"
+#include <iostream>
 
 using namespace std;
 
 static struct WindowsPort s_windowsBU[MAX_WINDOWS] = { 0 };
+extern int g_AveWaitTime, g_Time;
+
 
 int is_equal();
+void reflesh_panel(int);
+void block_button(int);
 
-extern int g_AveWaitTime, g_Time;
 
 void output(const int QueueNum, const int State, int out) {
 	if (out == WRITE_VIA_FILE) {
@@ -160,4 +166,32 @@ int is_equal() {
 		}
 	}
 	return 1;
+}
+
+void output_graph(int QueueNum, int State) {
+	reflesh_panel(State);
+
+	return;
+}
+
+void reflesh_panel(int state) {
+	cleardevice();
+	PIMAGE img = newimage();
+	getimage(img, "run.png");
+	putimage(0, 0, img);
+	delimage(img);
+	block_button(state);
+	return;
+}
+
+void block_button(int state) {
+	if (state == WAIT_FOR_QUIT) {
+		imagefilter_blurring(NULL, 0x00, 0x50, Q_X, Q_Y, EBX, EBY);
+	}
+	for (int i = 0; i < REAL_WINDOWS; ++i) {
+		if (g_windows[i + 1].State == CLOSE_PORT || g_windows[i + 1].RestSignal == 1) {
+			imagefilter_blurring(NULL, 0x00, 0x50, W1_X, W1_Y + WD * i, W1_X + WX, W1_Y + WD * i + WY);
+		}
+	}
+	return;
 }
