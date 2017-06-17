@@ -4,8 +4,6 @@
 #include <random>
 #include <ctime>
 #include <conio.h>
-#include <thread>
-#include <mutex>
 #include <fstream>
 #include <iostream>
 

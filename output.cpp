@@ -4,6 +4,7 @@
 #include <cmath>
 #include <fstream>
 #include <iostream>
+#include <thread>
 
 using namespace std;
 
@@ -170,7 +171,9 @@ int is_equal() {
 
 void output_graph(int QueueNum, int State, int in_mode) {
 	reflesh_panel(State, in_mode);
-
+	
+	delay_fps(60);
+	this_thread::sleep_for(chrono::seconds(1));
 	return;
 }
 
@@ -190,12 +193,12 @@ void block_button(int state, int in_mode) {
 	}
 	for (int i = 0; i < REAL_WINDOWS; ++i) {
 		if (g_windows[i + 1].State == CLOSE_PORT || g_windows[i + 1].RestSignal == 1) {
-			imagefilter_blurring(NULL, 0x00, 0x50, W_X, W_Y + WD_Y * i, W_X + WX, W_Y + WD_Y * i + WY);
+			imagefilter_blurring(NULL, 0x00, 0x50, W_X, W_Y + WD_Y * i, WX, WY);
 		}
 	}
 	if (in_mode == CREAT_VIA_POISSON) {
-		imagefilter_blurring(NULL, 0x00, 0x50, CC1_X, CC1_Y, CC1_X + EBX, CC1_Y + EBY);
-		imagefilter_blurring(NULL, 0x00, 0x50, CC5_X, CC5_Y, CC5_X + EBX, CC5_Y + EBY);
+		imagefilter_blurring(NULL, 0x00, 0x50, CC1_X, CC1_Y, EBX, EBY);
+		imagefilter_blurring(NULL, 0x00, 0x50, CC5_X, CC5_Y, EBX, EBY);
 	}
 	return;
 }

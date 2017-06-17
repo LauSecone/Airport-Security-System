@@ -104,6 +104,7 @@ void init_graph(int &in_mode) {
 		g_MaxRestSec = 5;
 	}
 	//show choose graph
+	setinitmode(INIT_ANIMATION);
 	initgraph(SCREEN_X, SCREEN_Y);
 	PIMAGE img = newimage();
 	getimage(img, "choose.png");
@@ -128,6 +129,12 @@ void init_graph(int &in_mode) {
 		choose_mode(in_mode, RVF_X, RVF_Y, msg, 1);
 		choose_mode(in_mode, RVS_X, RVS_Y, msg, 5);
 		choose_mode(in_mode, CVP_X, CVP_Y, msg, 6);
+		if (g_MaxTimeLen < g_MinTimeLen) {
+			g_MaxTimeLen = g_MinTimeLen;
+		}
+		if (g_MaxRestSec < g_MinRestSec) {
+			g_MaxRestSec = g_MinRestSec;
+		}
 	}
 	--in_mode;
 	if (in_mode == CREAT_VIA_POISSON) {
@@ -141,14 +148,14 @@ void init_graph(int &in_mode) {
 void print_cfg(int lamda) {  
 	setcolor(EGERGB(0x0, 0xFF, 0x0));
 	setfont(NUM_SIZE, 0, TYPEFACE);
-	xyprintf(MAXTL_X + (S_LEN / 2), MAXTL_Y, "%d", g_MaxTimeLen);
-	xyprintf(MINTL_X + (S_LEN / 2), MINTL_Y, "%d", g_MinTimeLen);
-	xyprintf(MAXRS_X + (S_LEN / 2), MAXRS_Y, "%d", g_MaxRestSec);
-	xyprintf(MINRS_X + (S_LEN / 2), MINRS_Y, "%d", g_MinRestSec);
-	xyprintf(MCSL_X + (S_LEN / 2), MCSL_Y, "%d", g_MaxCustSingleLine);
-	xyprintf(ML_X + (S_LEN / 2), ML_Y, "%d", g_MaxLines);
-	xyprintf(MSL_X + (S_LEN / 2), MSL_Y, "%d", g_MaxSeqLen);
-	xyprintf(L_X + (S_LEN / 2), L_Y, "%d", lamda);
+	xyprintf(MAXTL_X + (S_LEN / 2), MAXTL_Y, "%3d", g_MaxTimeLen);
+	xyprintf(MINTL_X + (S_LEN / 2), MINTL_Y, "%3d", g_MinTimeLen);
+	xyprintf(MAXRS_X + (S_LEN / 2), MAXRS_Y, "%3d", g_MaxRestSec);
+	xyprintf(MINRS_X + (S_LEN / 2), MINRS_Y, "%3d", g_MinRestSec);
+	xyprintf(MCSL_X + (S_LEN / 2), MCSL_Y, "%3d", g_MaxCustSingleLine);
+	xyprintf(ML_X + (S_LEN / 2), ML_Y, "%3d", g_MaxLines);
+	xyprintf(MSL_X + (S_LEN / 2), MSL_Y, "%3d", g_MaxSeqLen);
+	xyprintf(L_X + (S_LEN / 2), L_Y, "%3d", lamda);
 }
 
 void judge_iod(int &num, int x, int y, mouse_msg msg) {
