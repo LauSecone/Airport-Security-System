@@ -149,7 +149,7 @@ void init_graph() {
 }
 
 void print_cfg(int lamda) {
-	setfont(NUM_SIZE, 0, TYPEFACE);
+	setbkmode(TRANSPARENT);
 	setcolor(EGERGB(0xFF, 0xFF, 0xFF));
 	setfont(NUM_SIZE, 0, TYPEFACE);
 	xyprintf(MAXTL_X + (S_LEN / 2), MAXTL_Y, "%3d", g_MaxTimeLen);

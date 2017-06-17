@@ -77,7 +77,7 @@ void block_button() {
 			imagefilter_blurring(NULL, 0x00, 0x50, W_X, W_Y + WD_Y * i, WX, WY);
 		}
 	}
-	if (g_in_mode == READ_VIA_FILE || g_in_mode == CREAT_VIA_POISSON) {
+	if (g_in_mode == READ_VIA_FILE || g_in_mode == CREAT_VIA_POISSON || g_state == WAIT_FOR_QUIT) {
 		imagefilter_blurring(NULL, 0x00, 0x50, CC1_X, CC1_Y, EBX, EBY);
 		imagefilter_blurring(NULL, 0x00, 0x50, CC5_X, CC5_Y, EBX, EBY);
 	}
