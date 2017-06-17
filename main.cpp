@@ -11,7 +11,7 @@ int g_AveWaitTime = 0, g_Time = 0;
 void init_graph(int &);
 void input(int &, string &, int &, int);
 //void output(int, int, int);
-void output_graph(int, int);
+void output_graph(int, int, int);
 void check_quit(int &);
 void state_trans(const string &);
 void rest_or_not(int &, const string &);
@@ -46,7 +46,7 @@ int main() {
 		check_quit(State);
 		//output
 		//output(QueueNum, State, out);
-		output_graph(QueueNum, State);
+		output_graph(QueueNum, State, in_mode);
 	}
 	/*
 	//echo

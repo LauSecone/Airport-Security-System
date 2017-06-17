@@ -12,7 +12,7 @@ void print_cfg(int);
 void judge_iod(int &, int, int, mouse_msg);
 void choose_mode(int &, int, int, mouse_msg, int);
 int on_button(int, int, int, int, int, int);
-void reflesh_panel(int);
+void reflesh_panel(int, int);
 
 void init(int &in, int &out) {
 	//将前四个安检口置为可用
@@ -134,7 +134,7 @@ void init_graph(int &in_mode) {
 
 	}
 	set_lamda(lamda);
-	reflesh_panel(1);
+	reflesh_panel(ON_DUTY, in_mode);
 	return;
 }
 

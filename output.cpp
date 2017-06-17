@@ -12,8 +12,8 @@ extern int g_AveWaitTime, g_Time;
 
 
 int is_equal();
-void reflesh_panel(int);
-void block_button(int);
+void reflesh_panel(int, int);
+void block_button(int, int);
 
 
 void output(const int QueueNum, const int State, int out) {
@@ -168,23 +168,23 @@ int is_equal() {
 	return 1;
 }
 
-void output_graph(int QueueNum, int State) {
-	reflesh_panel(State);
+void output_graph(int QueueNum, int State, int in_mode) {
+	reflesh_panel(State, in_mode);
 
 	return;
 }
 
-void reflesh_panel(int state) {
+void reflesh_panel(int state, int in_mode) {
 	cleardevice();
 	PIMAGE img = newimage();
 	getimage(img, "run.png");
 	putimage(0, 0, img);
 	delimage(img);
-	block_button(state);
+	block_button(state, in_mode);
 	return;
 }
 
-void block_button(int state) {
+void block_button(int state, int in_mode) {
 	if (state == WAIT_FOR_QUIT) {
 		imagefilter_blurring(NULL, 0x00, 0x50, Q_X, Q_Y, EBX, EBY);
 	}
@@ -192,6 +192,10 @@ void block_button(int state) {
 		if (g_windows[i + 1].State == CLOSE_PORT || g_windows[i + 1].RestSignal == 1) {
 			imagefilter_blurring(NULL, 0x00, 0x50, W_X, W_Y + WD_Y * i, W_X + WX, W_Y + WD_Y * i + WY);
 		}
+	}
+	if (in_mode == CREAT_VIA_POISSON) {
+		imagefilter_blurring(NULL, 0x00, 0x50, CC1_X, CC1_Y, CC1_X + EBX, CC1_Y + EBY);
+		imagefilter_blurring(NULL, 0x00, 0x50, CC5_X, CC5_Y, CC5_X + EBX, CC5_Y + EBY);
 	}
 	return;
 }
