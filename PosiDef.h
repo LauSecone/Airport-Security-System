@@ -3,8 +3,9 @@
 #ifndef POSITION_DEFINITION_H_
 #define POSITION_DEFINITION_H_
 
-//Number Size
+//Font Define
 #define NUM_SIZE 16
+#define TYPEFACE "serif"
 //Max Cust Single line
 #define MCSL_X 0
 #define MCSL_Y 0

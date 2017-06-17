@@ -140,7 +140,7 @@ void init_graph(int &in_mode) {
 
 void print_cfg(int lamda) {  
 	setcolor(EGERGB(0x0, 0xFF, 0x0));
-	setfont(NUM_SIZE, 0, "serif");
+	setfont(NUM_SIZE, 0, TYPEFACE);
 	xyprintf(MAXTL_X + (S_LEN / 2), MAXTL_Y, "%d", g_MaxTimeLen);
 	xyprintf(MINTL_X + (S_LEN / 2), MINTL_Y, "%d", g_MinTimeLen);
 	xyprintf(MAXRS_X + (S_LEN / 2), MAXRS_Y, "%d", g_MaxRestSec);
