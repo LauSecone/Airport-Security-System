@@ -62,5 +62,16 @@
 #define Q_Y 621
 #define EBX 189
 #define EBY 39
+
+#define TOPLEFT_X 176
+#define TOPLEFT_Y 62
+#define RADIUS 15
+#define SPACING 10
+#define DOTTEDLEN 25
+#define WIN_X 967
+#define WIN_Y 62
+#define WIN_SPACE 68
+#define REST_SIGNAL_X 1180
+#define REST_SIGNAL_Y 62
 #endif
 //POSITION_DEFINITION_H_

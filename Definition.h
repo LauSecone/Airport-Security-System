@@ -27,7 +27,6 @@
 #define CREAT_VIA_POISSON 2
 #define READ_USE_THREAD 3
 #define READ_VIA_SCREEN 4
-#define READ_VIA_GRAPH 5
 #define WRITE_VIA_FILE 0
 #define WRITE_VIA_MONITOR 1
 

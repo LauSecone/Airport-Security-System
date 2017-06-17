@@ -1,5 +1,4 @@
 #include "Definition.h"
-#include "graphics.h"
 #include "PosiDef.h"
 #include <cmath>
 #include <fstream>

@@ -13,12 +13,12 @@ void rest_or_not(int &quenum, const string &restrequest) {
 		if (g_windows[i].State != RESTTING_PORT && g_windows[i].State != CLOSE_PORT && restrequest[i] == 'R')
 			requeststore[i] = 1;
 	for (i = 1; i <= REAL_WINDOWS; ++i)
-		if (g_windows[i].State != RESTTING_PORT && g_windows[i].State != CLOSE_PORT)
+		if (g_windows[i].State != RESTTING_PORT && g_windows[i].State != CLOSE_PORT && g_windows[i].RestSignal != 1)
 			++cnt;//统计正常工作的安检口个数
 	for (i = 1; i <= REAL_WINDOWS; ++i)
 		if (s_reststate[i] || requeststore[i])//考虑到安检口重复申请休息
 			++cntrequest;//统计休息申请个数
-	while (cnt >= 1 && quenum / cnt < g_MaxSeqLen && cntrequest > 0) {
+	while (cnt > 1 && quenum / cnt < g_MaxSeqLen && cntrequest > 0) {
 		int flag = 1;
 		for (i = 1; i <= REAL_WINDOWS && flag; ++i)
 			if (s_reststate[i]) {
@@ -47,4 +47,8 @@ void rest_or_not(int &quenum, const string &restrequest) {
 	for (i = 1; i <= REAL_WINDOWS; ++i)
 		if (requeststore[i])
 			s_reststate[i] = 1;//保存未被批准的休息申请	
+}
+
+int rest_state(int num) {
+	return s_reststate[num];
 }

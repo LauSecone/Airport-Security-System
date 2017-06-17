@@ -130,7 +130,7 @@ void init_graph() {
 		judge_iod(lamda, L_X, L_Y, msg);
 		choose_mode(g_in_mode, RVF_X, RVF_Y, msg, 1);
 		choose_mode(g_in_mode, RVS_X, RVS_Y, msg, 5);
-		choose_mode(g_in_mode, CVP_X, CVP_Y, msg, 6);
+		choose_mode(g_in_mode, CVP_X, CVP_Y, msg, 3);
 		if (g_MaxTimeLen < g_MinTimeLen) {
 			g_MaxTimeLen = g_MinTimeLen;
 		}
@@ -140,9 +140,8 @@ void init_graph() {
 	}
 	--g_in_mode;
 	if (g_in_mode == CREAT_VIA_POISSON) {
-
+		set_lamda(lamda);
 	}
-	set_lamda(lamda);
 	closegraph();
 	thread io(graph_io);
 	io.detach();
@@ -150,7 +149,8 @@ void init_graph() {
 }
 
 void print_cfg(int lamda) {
-	setcolor(EGERGB(0x00, 0xFF, 0x00));
+	setfont(NUM_SIZE, 0, TYPEFACE);
+	setcolor(EGERGB(0xFF, 0xFF, 0xFF));
 	setfont(NUM_SIZE, 0, TYPEFACE);
 	xyprintf(MAXTL_X + (S_LEN / 2), MAXTL_Y, "%3d", g_MaxTimeLen);
 	xyprintf(MINTL_X + (S_LEN / 2), MINTL_Y, "%3d", g_MinTimeLen);
@@ -165,7 +165,9 @@ void print_cfg(int lamda) {
 void judge_iod(int &num, int x, int y, mouse_msg msg) {
 	if (msg.is_left() && msg.is_up()) {
 		if (on_button(msg.x, msg.y, x, x + SS_LEN, y, y + SS_LEN)) {
-			--num;
+			if (num - 1) {
+				--num;
+			}
 		}
 		if (on_button(msg.x, msg.y, x + S_LEN, x + S_LEN + SS_LEN, y, y + SS_LEN)) {
 			++num;

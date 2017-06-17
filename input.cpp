@@ -1,4 +1,3 @@
-#include "graphics.h"
 #include "PosiDef.h"
 #include "Definition.h"
 #include <random>
@@ -79,7 +78,9 @@ void input(int &CurTimeNumOfCustCome, string &CurTimeRequestOfWindows, int &stat
 		static poisson_distribution<int> s_p(s_lamda);
 		static default_random_engine s_e((unsigned int)time(0));
 		CurTimeNumOfCustCome = s_p(s_e);
-		cout << "Poisson distribution number is " << CurTimeNumOfCustCome << endl;
+		CurTimeRequestOfWindows = s_RequestOfWindows;
+		s_RequestOfWindows.assign(MAX_WINDOWS, '0');
+		//cout << "Poisson distribution number is " << CurTimeNumOfCustCome << endl;
 		if (g_Time == s_quittime) {
 			state = WAIT_FOR_QUIT;
 		}
@@ -95,7 +96,7 @@ void input(int &CurTimeNumOfCustCome, string &CurTimeRequestOfWindows, int &stat
 		//push input data
 		push_data(CurTimeRequestOfWindows, CurTimeNumOfCustCome, state);
 	}
-	if (in_mode == READ_VIA_GRAPH) {
+	if (in_mode == READ_VIA_SCREEN) {
 		//init
 		CurTimeRequestOfWindows.assign(MAX_WINDOWS, '0');
 		CurTimeNumOfCustCome = 0;
@@ -162,7 +163,7 @@ void judge_rest(int x, int y, bool is_left, bool is_up, int mx, int my) {
 
 void come_cust(int num, int x, int y, bool is_left, bool is_up, int mx, int my) {
 	if (is_left && is_up && on_button(mx, my, x, x + EBX, y, y + EBY)) {
-		++s_NumOfCustCome;
+		s_NumOfCustCome += num;
 	}
 	return;
 }

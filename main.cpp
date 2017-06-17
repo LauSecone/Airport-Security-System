@@ -1,5 +1,6 @@
 #include "Definition.h"
 #include <thread>
+#include <mutex>
 
 using namespace std;
 
@@ -7,6 +8,7 @@ struct WindowsPort g_windows[MAX_WINDOWS] = { 0 };
 int g_MaxCustSingleLine, g_MaxLines, g_MaxSeqLen, g_MinTimeLen, g_MaxTimeLen, g_MinRestSec, g_MaxRestSec;
 int g_AveWaitTime = 0, g_Time = 0;
 int g_state = ON_DUTY, g_QueueNum = 0, g_in_mode = 0;
+mutex m;
 
 //void init(int &, int &);
 void init_graph();
@@ -30,6 +32,7 @@ int main() {
 		int CurTimeNumOfCustCome = 0;
 		//pause
 		this_thread::sleep_for(chrono::seconds(1));
+		m.lock();
 		//input
 		input(CurTimeNumOfCustCome, CurTimeRequestOfWindows, g_state, g_in_mode);
 		//process
@@ -39,6 +42,7 @@ int main() {
 		come_in_cust(g_QueueNum, CurTimeNumOfCustCome);
 		state_trans(CurTimeRequestOfWindows);
 		check_quit();
+		m.unlock();
 		//output
 		//output(QueueNum, State, out);
 	}
