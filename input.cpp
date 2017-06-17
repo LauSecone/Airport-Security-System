@@ -20,9 +20,6 @@ void process_request_string(string &);
 void set_lamda_quittime(double, int);
 void read_char();
 int on_button(int, int, int, int, int, int);
-void judge_rest(int, int, mouse_msg);
-void come_cust(int, int, int, mouse_msg);
-void judge_quit(int, int, mouse_msg);
 void push_data(string &, int &, int &);
 
 void input(int &CurTimeNumOfCustCome, string &CurTimeRequestOfWindows, int &state, int in_mode) {
@@ -153,22 +150,9 @@ void read_char() {
 	return;
 }
 
-void mouse_event() {
-	mouse_msg msg = { 0 };
-	while (s_status != WAIT_FOR_QUIT) {
-		msg = getmouse();
-		flushmouse();
-		judge_rest(W_X, W_Y, msg);
-		come_cust(1, CC1_X, CC1_Y, msg);
-		come_cust(5, CC5_Y, CC5_Y, msg);
-		judge_quit(Q_X, Q_Y, msg);
-	}
-	return;
-}
-
-void judge_rest(int x, int y, mouse_msg msg) {
+void judge_rest(int x, int y, bool is_left, bool is_up, int mx, int my) {
 	for (int num = 1; num <= REAL_WINDOWS; ++num) {
-		if (msg.is_left() && msg.is_up() && on_button(msg.x, msg.y, x, x + WX, y, y + WY)) {
+		if (is_left && is_up && on_button(mx, my, x, x + WX, y, y + WY)) {
 			s_RequestOfWindows[num] = 'R';
 		}
 		y += WD_Y;
@@ -176,15 +160,15 @@ void judge_rest(int x, int y, mouse_msg msg) {
 	return;
 }
 
-void come_cust(int num, int x, int y, mouse_msg msg) {
-	if (msg.is_left() && msg.is_up() && on_button(msg.x, msg.y, x, x + EBX, y, y + EBY)) {
+void come_cust(int num, int x, int y, bool is_left, bool is_up, int mx, int my) {
+	if (is_left && is_up && on_button(mx, my, x, x + EBX, y, y + EBY)) {
 		++s_NumOfCustCome;
 	}
 	return;
 }
 
-void judge_quit(int x, int y, mouse_msg msg) {
-	if (msg.is_left() && msg.is_up() && on_button(msg.x, msg.y, x, x + EBX, y, y + EBY)) {
+void judge_quit(int x, int y, bool is_left, bool is_up, int mx, int my) {
+	if (is_left && is_up && on_button(mx, my, x, x + EBX, y, y + EBY)) {
 		s_status = WAIT_FOR_QUIT;
 		s_quittime = g_Time;
 	}

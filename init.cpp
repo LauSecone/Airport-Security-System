@@ -3,6 +3,7 @@
 #include "PosiDef.h"
 #include <iostream>
 #include <fstream>
+#include <thread>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ void print_cfg(int);
 void judge_iod(int &, int, int, mouse_msg);
 void choose_mode(int &, int, int, mouse_msg, int);
 int on_button(int, int, int, int, int, int);
-void reflesh_panel(int, int);
+void graph_io();
 
 void init(int &in, int &out) {
 	//将前四个安检口置为可用
@@ -75,7 +76,8 @@ void init(int &in, int &out) {
 	return;
 }
 
-void init_graph(int &in_mode) {
+void init_graph() {
+	extern int g_in_mode;
 	//将前四个安检口置为可用
 	for (int i = 1; i <= INIT_OPEN_WINDOWS; ++i) {
 		g_windows[i].State = AVAILABLE_PORT;
@@ -112,8 +114,8 @@ void init_graph(int &in_mode) {
 	delimage(img);
 	int lamda = 1;
 	//get mouse input
-	in_mode = 0;
-	while (!in_mode) {
+	g_in_mode = 0;
+	while (!g_in_mode) {
 		print_cfg(lamda);
 		mouse_msg msg = { 0 };
 		msg = getmouse();
@@ -126,9 +128,9 @@ void init_graph(int &in_mode) {
 		judge_iod(g_MaxRestSec, MAXRS_X, MAXRS_Y, msg);
 		judge_iod(g_MinRestSec, MINRS_X, MINRS_Y, msg);
 		judge_iod(lamda, L_X, L_Y, msg);
-		choose_mode(in_mode, RVF_X, RVF_Y, msg, 1);
-		choose_mode(in_mode, RVS_X, RVS_Y, msg, 5);
-		choose_mode(in_mode, CVP_X, CVP_Y, msg, 6);
+		choose_mode(g_in_mode, RVF_X, RVF_Y, msg, 1);
+		choose_mode(g_in_mode, RVS_X, RVS_Y, msg, 5);
+		choose_mode(g_in_mode, CVP_X, CVP_Y, msg, 6);
 		if (g_MaxTimeLen < g_MinTimeLen) {
 			g_MaxTimeLen = g_MinTimeLen;
 		}
@@ -136,17 +138,19 @@ void init_graph(int &in_mode) {
 			g_MaxRestSec = g_MinRestSec;
 		}
 	}
-	--in_mode;
-	if (in_mode == CREAT_VIA_POISSON) {
+	--g_in_mode;
+	if (g_in_mode == CREAT_VIA_POISSON) {
 
 	}
 	set_lamda(lamda);
-	reflesh_panel(ON_DUTY, in_mode);
+	closegraph();
+	thread io(graph_io);
+	io.detach();
 	return;
 }
 
-void print_cfg(int lamda) {  
-	setcolor(EGERGB(0x0, 0xFF, 0x0));
+void print_cfg(int lamda) {
+	setcolor(EGERGB(0x00, 0xFF, 0x00));
 	setfont(NUM_SIZE, 0, TYPEFACE);
 	xyprintf(MAXTL_X + (S_LEN / 2), MAXTL_Y, "%3d", g_MaxTimeLen);
 	xyprintf(MINTL_X + (S_LEN / 2), MINTL_Y, "%3d", g_MinTimeLen);
@@ -170,9 +174,9 @@ void judge_iod(int &num, int x, int y, mouse_msg msg) {
 	return;
 }
 
-void choose_mode(int &in_mode, int x, int y, mouse_msg msg, int mode) {
+void choose_mode(int &g_in_mode, int x, int y, mouse_msg msg, int mode) {
 	if (msg.is_left() && msg.is_up() && on_button(msg.x, msg.y, x, x + CBX, y, y + CBY)) {
-		in_mode = mode;
+		g_in_mode = mode;
 	}
 }
 

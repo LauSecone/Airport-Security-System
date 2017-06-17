@@ -2,9 +2,11 @@
 
 using namespace std;
 
-void check_quit(int &State) {
+extern int g_state;
+
+void check_quit() {
 	//若上班状态，推出
-	if (State == ON_DUTY) {
+	if (g_state == ON_DUTY) {
 		return;
 	}
 	//所有窗口均无人，下班
@@ -15,7 +17,7 @@ void check_quit(int &State) {
 		}
 	}
 	if (flag) {
-		State = OFF_DUTY;
+		g_state = OFF_DUTY;
 	}
 	return;
 }
