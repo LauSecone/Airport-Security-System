@@ -19,7 +19,7 @@ int rest_state(int);
 void rest_display();
 void winstate_display();
 void queue_warning();
-extern mutex m;
+extern mutex g_m;
 
 extern int g_state, g_QueueNum, g_in_mode, g_Time, g_AveWaitTime;
 
@@ -27,8 +27,10 @@ void graph_io() {
 	setinitmode(INIT_ANIMATION);
 	initgraph(SCREEN_X, SCREEN_Y);
 	for (; is_run(); delay_fps(60)) {
-		m.lock();
+		g_m.lock();
+		//reflesh
 		reflesh_panel();
+		//display graph and data
 		airport_state();
 		wait_interval_display();
 		time_display();
@@ -37,7 +39,7 @@ void graph_io() {
 		rest_display();
 		winstate_display();
 		queue_warning();
-
+		//deal mouse event
 		mouse_msg msg = { 0 };
 		if (mousemsg()) {
 			msg = getmouse();
@@ -51,7 +53,7 @@ void graph_io() {
 		if (g_in_mode == READ_VIA_SCREEN || g_in_mode == CREAT_VIA_POISSON) {
 			judge_quit(Q_X, Q_Y, msg.is_left(), msg.is_up(), msg.x, msg.y);
 		}
-		m.unlock();
+		g_m.unlock();
 	}
 	closegraph();
 	g_state = OFF_DUTY;
@@ -59,16 +61,19 @@ void graph_io() {
 }
 
 void reflesh_panel() {
+	//dispay panel
 	PIMAGE img = newimage();
 	getimage(img, "run.png");
 	putimage(0, 0, img);
 	delimage(img);
 	extern int g_Time;
+	//block unactive button
 	block_button();
 	return;
 }
 
 void block_button() {
+	//use imagefilter_blurring to decrease brightness
 	if (g_state == WAIT_FOR_QUIT || g_in_mode == READ_VIA_FILE) {
 		imagefilter_blurring(NULL, 0x00, 0x50, Q_X, Q_Y, EBX, EBY);
 	}
@@ -200,12 +205,14 @@ void wait_interval_display() {
 	sprintf(s, "%d", g_AveWaitTime);
 	outtextxy(393, 560, s);
 }
+
 void queue_warning() {
 	setcolor(EGERGB(255, 255, 255));
 	setfont(NUM_SIZE, 0, TYPEFACE);
 	if (g_QueueNum == g_MaxCustSingleLine * g_MaxLines)
 		outtextxy(265, 20, "缓冲区已满");
 }
+
 void time_display() {
 	setcolor(EGERGB(255, 255, 255));
 	setfont(NUM_SIZE, 0, TYPEFACE);

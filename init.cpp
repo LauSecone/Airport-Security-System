@@ -54,6 +54,7 @@ void init(int &in, int &out) {
 	}
 	--in;
 	if (in == CREAT_VIA_POISSON) {
+		//read and set lamda and quittime
 		cout << "Please input lamda :";
 		double lamda;
 		cin >> lamda;
@@ -120,6 +121,7 @@ void init_graph() {
 		mouse_msg msg = { 0 };
 		msg = getmouse();
 		flushmouse();
+		// judge increase or decrease
 		judge_iod(g_MaxCustSingleLine, MCSL_X, MCSL_Y, msg);
 		judge_iod(g_MaxLines, ML_X, ML_Y, msg);
 		judge_iod(g_MaxSeqLen, MSL_X, MSL_Y, msg);
@@ -128,9 +130,11 @@ void init_graph() {
 		judge_iod(g_MaxRestSec, MAXRS_X, MAXRS_Y, msg);
 		judge_iod(g_MinRestSec, MINRS_X, MINRS_Y, msg);
 		judge_iod(lamda, L_X, L_Y, msg);
+		//choose button event
 		choose_mode(g_in_mode, RVF_X, RVF_Y, msg, 1);
 		choose_mode(g_in_mode, RVS_X, RVS_Y, msg, 5);
 		choose_mode(g_in_mode, CVP_X, CVP_Y, msg, 3);
+		//error data check
 		if (g_MaxTimeLen < g_MinTimeLen) {
 			g_MaxTimeLen = g_MinTimeLen;
 		}
@@ -139,17 +143,19 @@ void init_graph() {
 		}
 	}
 	--g_in_mode;
+	//if is poisson, set lamda
 	if (g_in_mode == CREAT_VIA_POISSON) {
 		set_lamda(lamda);
 	}
 	closegraph();
+	//creat thread to show run panel
 	thread io(graph_io);
 	io.detach();
 	return;
 }
 
 void print_cfg(int lamda) {
-	setbkmode(TRANSPARENT);
+	//show config data
 	setcolor(EGERGB(0xFF, 0xFF, 0xFF));
 	setfont(NUM_SIZE, 0, TYPEFACE);
 	xyprintf(MAXTL_X + (S_LEN / 2), MAXTL_Y, "%3d", g_MaxTimeLen);
@@ -164,11 +170,13 @@ void print_cfg(int lamda) {
 
 void judge_iod(int &num, int x, int y, mouse_msg msg) {
 	if (msg.is_left() && msg.is_up()) {
+		//decrease
 		if (on_button(msg.x, msg.y, x, x + SS_LEN, y, y + SS_LEN)) {
 			if (num - 1) {
 				--num;
 			}
 		}
+		//increase
 		if (on_button(msg.x, msg.y, x + S_LEN, x + S_LEN + SS_LEN, y, y + SS_LEN)) {
 			++num;
 		}
@@ -177,11 +185,14 @@ void judge_iod(int &num, int x, int y, mouse_msg msg) {
 }
 
 void choose_mode(int &g_in_mode, int x, int y, mouse_msg msg, int mode) {
+	//change mode
 	if (msg.is_left() && msg.is_up() && on_button(msg.x, msg.y, x, x + CBX, y, y + CBY)) {
 		g_in_mode = mode;
 	}
+	return;
 }
 
 int on_button(int x, int y, int x1, int x2, int y1, int y2) {
+	//return on button or not
 	return (x1 <= x && x <= x2 && y1 <= y && y <= y2);
 }

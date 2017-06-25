@@ -116,6 +116,7 @@ void push_data(string &CurTimeRequestOfWindows, int &CurTimeNumOfCustCome, int &
 }
 
 void process_request_string(string &str) {
+	//convert string to data
 	char sta = '0';
 	for (auto iter : str) {
 		switch (iter) {
@@ -143,6 +144,7 @@ void set_lamda(double lam) {
 }
 
 void read_char() {
+	//use thread to get string
 	while (s_status != WAIT_FOR_QUIT) {
 		char ch;
 		ch = (char)_getche();
